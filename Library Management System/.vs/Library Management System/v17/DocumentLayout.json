@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|e:\\job\\centralogic\\day4(10-05-2024)\\trainee_.net_assignment1\\library management system\\library management system\\controllers\\bookissuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|solutionrelative:library management system\\controllers\\bookissuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|e:\\job\\centralogic\\day4(10-05-2024)\\trainee_.net_assignment1\\library management system\\library management system\\models\\issuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|solutionrelative:library management system\\models\\issuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|e:\\job\\centralogic\\day4(10-05-2024)\\trainee_.net_assignment1\\library management system\\library management system\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|solutionrelative:library management system\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|e:\\job\\centralogic\\day4(10-05-2024)\\trainee_.net_assignment1\\library management system\\library management system\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{695B273B-EA38-4946-8D38-EA850B6F58EB}|Library Management System\\LibraryManagementSystem.csproj|solutionrelative:library management system\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IssueModel.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Models\\IssueModel.cs",
+              "RelativeDocumentMoniker": "Library Management System\\Models\\IssueModel.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Models\\IssueModel.cs",
+              "RelativeToolTip": "Library Management System\\Models\\IssueModel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwBsAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T13:19:57.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookIssueController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\BookIssueController.cs",
+              "RelativeDocumentMoniker": "Library Management System\\Controllers\\BookIssueController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\BookIssueController.cs",
+              "RelativeToolTip": "Library Management System\\Controllers\\BookIssueController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T10:24:54.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MemberController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\MemberController.cs",
+              "RelativeDocumentMoniker": "Library Management System\\Controllers\\MemberController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\MemberController.cs",
+              "RelativeToolTip": "Library Management System\\Controllers\\MemberController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwC0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T09:15:28.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Library Management System\\Controllers\\BookController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Library Management System\\Controllers\\BookController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAO4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T09:26:44.846Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

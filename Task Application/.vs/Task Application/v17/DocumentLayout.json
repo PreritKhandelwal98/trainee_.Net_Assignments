@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Task Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A274475-99D5-4485-93FF-97E7C8C80A69}|Task Application\\Task Application.csproj|e:\\job\\centralogic\\day4(10-05-2024)\\trainee_.net_assignment1\\task application\\task application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A274475-99D5-4485-93FF-97E7C8C80A69}|Task Application\\Task Application.csproj|solutionrelative:task application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Task Application\\Task Application\\Program.cs",
+              "RelativeDocumentMoniker": "Task Application\\Program.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Task Application\\Task Application\\Program.cs",
+              "RelativeToolTip": "Task Application\\Program.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAowA4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:38:29.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\bin\Debug\net8.0\Inventory Management System.exe
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\bin\Debug\net8.0\Inventory Management System.deps.json
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\bin\Debug\net8.0\Inventory Management System.runtimeconfig.json
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\bin\Debug\net8.0\Inventory Management System.dll
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\bin\Debug\net8.0\Inventory Management System.pdb
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.GeneratedMSBuildEditorConfig.editorconfig
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.AssemblyInfoInputs.cache
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.AssemblyInfo.cs
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.csproj.CoreCompileInputs.cache
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.sourcelink.json
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.dll
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\refint\Inventory Management System.dll
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.pdb
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\Inventory Management System.genruntimeconfig.cache
+E:\Job\CentraLogic\Day4(10-05-2024)\trainee_.Net_Assignment1\Inventory Management System\Inventory Management System\obj\Debug\net8.0\ref\Inventory Management System.dll

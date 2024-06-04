@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\cosmodb\\cosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\cosmodb\\cosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\cosmodb\\icosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\cosmodb\\icosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\services\\retailshopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\services\\retailshopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\controllers\\retailshopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\controllers\\retailshopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\interface\\iretailshopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\interface\\iretailshopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\dto\\retailshopdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\dto\\retailshopdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\retail shop\\retail shop\\entities\\retailshopentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD8B6CD-E097-4C5F-8B90-AF78D90B079D}|Retail Shop\\Retail Shop.csproj|solutionrelative:retail shop\\entities\\retailshopentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CosmoDBService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\CosmoDB\\CosmoDBService.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\CosmoDB\\CosmoDBService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\CosmoDB\\CosmoDBService.cs",
+              "RelativeToolTip": "Retail Shop\\CosmoDB\\CosmoDBService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwAgAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:03:20.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICosmoDBService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\CosmoDB\\ICosmoDBService.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\CosmoDB\\ICosmoDBService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\CosmoDB\\ICosmoDBService.cs",
+              "RelativeToolTip": "Retail Shop\\CosmoDB\\ICosmoDBService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:03:05.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RetailShopService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Services\\RetailShopService.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\Services\\RetailShopService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Services\\RetailShopService.cs",
+              "RelativeToolTip": "Retail Shop\\Services\\RetailShopService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:02:02.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RetailShopController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Controllers\\RetailShopController.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\Controllers\\RetailShopController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Controllers\\RetailShopController.cs",
+              "RelativeToolTip": "Retail Shop\\Controllers\\RetailShopController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:04:29.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRetailShopService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Interface\\IRetailShopService.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\Interface\\IRetailShopService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Interface\\IRetailShopService.cs",
+              "RelativeToolTip": "Retail Shop\\Interface\\IRetailShopService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T11:01:21.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RetailShopDTO.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\DTO\\RetailShopDTO.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\DTO\\RetailShopDTO.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\DTO\\RetailShopDTO.cs",
+              "RelativeToolTip": "Retail Shop\\DTO\\RetailShopDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:59:48.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RetailShopEntity.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Entities\\RetailShopEntity.cs",
+              "RelativeDocumentMoniker": "Retail Shop\\Entities\\RetailShopEntity.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Retail Shop\\Retail Shop\\Entities\\RetailShopEntity.cs",
+              "RelativeToolTip": "Retail Shop\\Entities\\RetailShopEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:55:28.443Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
