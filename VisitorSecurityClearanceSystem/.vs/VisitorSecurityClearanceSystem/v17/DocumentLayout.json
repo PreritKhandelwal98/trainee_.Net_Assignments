@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\visitorsecurityclearancesystem\\visitorsecurityclearancesystem\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|solutionrelative:visitorsecurityclearancesystem\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\visitorsecurityclearancesystem\\visitorsecurityclearancesystem\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|solutionrelative:visitorsecurityclearancesystem\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\visitorsecurityclearancesystem\\visitorsecurityclearancesystem\\entites\\managerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|solutionrelative:visitorsecurityclearancesystem\\entites\\managerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\visitorsecurityclearancesystem\\visitorsecurityclearancesystem\\dto\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|solutionrelative:visitorsecurityclearancesystem\\dto\\managerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\visitorsecurityclearancesystem\\visitorsecurityclearancesystem\\interface\\imanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC6BED0F-E919-4D94-AD7D-DC5A84DD0521}|VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem.csproj|solutionrelative:visitorsecurityclearancesystem\\interface\\imanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Controllers\\ManagerController.cs",
+              "RelativeDocumentMoniker": "VisitorSecurityClearanceSystem\\Controllers\\ManagerController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Controllers\\ManagerController.cs*",
+              "RelativeToolTip": "VisitorSecurityClearanceSystem\\Controllers\\ManagerController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T11:03:42.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagerService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Services\\ManagerService.cs",
+              "RelativeDocumentMoniker": "VisitorSecurityClearanceSystem\\Services\\ManagerService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Services\\ManagerService.cs",
+              "RelativeToolTip": "VisitorSecurityClearanceSystem\\Services\\ManagerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T11:04:39.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManagerEntity.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Entites\\ManagerEntity.cs",
+              "RelativeDocumentMoniker": "VisitorSecurityClearanceSystem\\Entites\\ManagerEntity.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Entites\\ManagerEntity.cs",
+              "RelativeToolTip": "VisitorSecurityClearanceSystem\\Entites\\ManagerEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T11:04:26.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManagerDTO.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\DTO\\ManagerDTO.cs",
+              "RelativeDocumentMoniker": "VisitorSecurityClearanceSystem\\DTO\\ManagerDTO.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\DTO\\ManagerDTO.cs",
+              "RelativeToolTip": "VisitorSecurityClearanceSystem\\DTO\\ManagerDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T11:04:15.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IManagerService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Interface\\IManagerService.cs",
+              "RelativeDocumentMoniker": "VisitorSecurityClearanceSystem\\Interface\\IManagerService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\VisitorSecurityClearanceSystem\\VisitorSecurityClearanceSystem\\Interface\\IManagerService.cs",
+              "RelativeToolTip": "VisitorSecurityClearanceSystem\\Interface\\IManagerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T11:04:03.395Z",
+              "EditorCaption": ""
             }
           ]
         }
