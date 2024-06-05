@@ -49,11 +49,33 @@ namespace VisitorSecurityClearanceSystem.Services
             return MapEntityToDTO(response);
         }
 
-        public async Task DeleteOffice(string id)
+        /*public async Task DeleteOffice(string id)
         {
             await _cosmoDBService.Delete<SecurityEntity>(id);
-        }
+        }*/
 
+
+        public async Task<OfficeDTO> LoginOfficeUser(string email, string password)
+        {
+            // Fetch the manager entity by email
+            var officeUser = await _cosmoDBService.GetOfficeUserByEmail(email);
+
+            if (officeUser == null || officeUser.Password != password)
+            {
+                return null; // Credentials are invalid
+            }
+
+            // Map ManagerEntity to ManagerDTO
+            var officeDto = new OfficeDTO
+            {
+                Id = officeUser.Id,
+                Name = officeUser.Name,
+                Email = officeUser.Email,
+                // Add other properties here
+            };
+
+            return officeDto;
+        }
         private OfficeEntity MapDTOToEntity(OfficeDTO officeModel)
         {
             return new OfficeEntity

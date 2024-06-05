@@ -8,7 +8,7 @@ namespace VisitorSecurityClearanceSystem.Interface
         Task<IEnumerable<VisitorDTO>> GetAllVisitors();
         Task<VisitorDTO> GetVisitorById(string id);
         Task<VisitorDTO> UpdateVisitor(string id, VisitorDTO visitorModel);
-        Task DeleteVisitor(string id);
-        /*Task<IEnumerable<VisitorDTO>> GetVisitorsByStatus(string status);*/
+/*        Task DeleteVisitor(string id);
+*/        /*Task<IEnumerable<VisitorDTO>> GetVisitorsByStatus(string status);*/
     }
 }

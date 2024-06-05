@@ -1,4 +1,5 @@
-﻿using VisitorSecurityClearanceSystem.DTO;
+﻿using VisitorSecurityClearanceSystem.CosmoDB;
+using VisitorSecurityClearanceSystem.DTO;
 using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
 
@@ -48,10 +49,10 @@ namespace VisitorSecurityClearanceSystem.Services
             return MapEntityToDTO(response);
         }
 
-        public async Task DeleteManager(string id)
+        /*public async Task DeleteManager(string id)
         {
             await _cosmoDBService.Delete<ManagerEntity>(id);
-        }
+        }*/
 
         private ManagerEntity MapDTOToEntity(ManagerDTO managerModel)
         {
@@ -62,6 +63,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Email = managerModel.Email,
                 Phone = managerModel.Phone,
                 Role = managerModel.Role,
+                
             };
         }
 
@@ -75,6 +77,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Email = managerEntity.Email,
                 Phone = managerEntity.Phone,
                 Role = managerEntity.Role,
+                
             };
         }
     }

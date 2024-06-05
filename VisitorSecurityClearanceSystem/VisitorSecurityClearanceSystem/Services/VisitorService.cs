@@ -80,10 +80,10 @@ namespace VisitorSecurityClearanceSystem.Services
             return MapEntityToDTO(response);
         }
 
-        public async Task DeleteVisitor(string id)
+        /*public async Task DeleteVisitor(string id)
         {
             await _cosmoDBService.Delete<VisitorEntity>(id);
-        }
+        }*/
 
         private VisitorEntity MapDTOToEntity(VisitorDTO visitorModel)
         {

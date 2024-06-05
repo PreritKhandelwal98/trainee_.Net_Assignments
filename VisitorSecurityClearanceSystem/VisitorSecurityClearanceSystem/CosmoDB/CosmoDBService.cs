@@ -1,4 +1,5 @@
 ﻿using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Linq;
 using System.ComponentModel;
 using VisitorSecurityClearanceSystem.Common;
 using VisitorSecurityClearanceSystem.Entites;
@@ -42,11 +43,48 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             return response.Resource;
         }
 
-        public async Task Delete<T>(string id)
+        /*public async Task Delete<T>(string id)
         {
-            await _container.DeleteItem<T>(id.ToString());
+            await _container.ReplaceItemAsync<T>(id);
+        }*/
+
+        public async Task<OfficeEntity> GetOfficeUserByEmail(string email)
+        {
+            var query = _container.GetItemLinqQueryable<OfficeEntity>(true)
+                                  .Where(q => q.Email == email && q.Active && !q.Archived)
+                                  .ToFeedIterator();
+
+            while (query.HasMoreResults)
+            {
+                var resultSet = await query.ReadNextAsync();
+                var officeUser = resultSet.FirstOrDefault();
+                if (officeUser != null)
+                {
+                    return officeUser;
+                }
+            }
+
+            return null;
         }
 
+        public async Task<SecurityEntity> GetSecurityUserByEmail(string email)
+        {
+            var query = _container.GetItemLinqQueryable<SecurityEntity>(true)
+                                  .Where(q => q.Email == email && q.Active && !q.Archived)
+                                  .ToFeedIterator();
+
+            while (query.HasMoreResults)
+            {
+                var resultSet = await query.ReadNextAsync();
+                var security = resultSet.FirstOrDefault();
+                if (security != null)
+                {
+                    return security;
+                }
+            }
+
+            return null;
+        }
         public async Task<VisitorEntity> GetVisitorByEmail(string email)
         {
             var query = _container.GetItemLinqQueryable<VisitorEntity>(true)

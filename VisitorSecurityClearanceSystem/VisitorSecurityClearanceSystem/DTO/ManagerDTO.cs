@@ -17,8 +17,7 @@ namespace VisitorSecurityClearanceSystem.DTO
         [JsonProperty("email")]
         public string Email { get; set; }
 
-        [JsonProperty("password")]
-        public string Password { get; set; }
+        
 
         [JsonProperty("role")]
         public string Role { get; set; }

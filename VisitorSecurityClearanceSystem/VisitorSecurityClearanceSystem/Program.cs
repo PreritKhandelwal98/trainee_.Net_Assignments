@@ -1,3 +1,4 @@
+using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.Interface;
 using VisitorSecurityClearanceSystem.Services;
 
@@ -14,6 +15,7 @@ builder.Services.AddScoped<IManagerService, ManagerService>();
 builder.Services.AddScoped<IOfficeService, OfficeService>();
 builder.Services.AddScoped<IVisitorService, VisitorService>();
 builder.Services.AddScoped<ISecurityService, SecurityService>();
+builder.Services.AddScoped<ICosmoDBService, CosmoDBService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

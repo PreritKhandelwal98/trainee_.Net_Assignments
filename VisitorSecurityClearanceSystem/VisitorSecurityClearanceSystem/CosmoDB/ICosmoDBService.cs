@@ -13,7 +13,10 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
         Task<IEnumerable<T>> GetAll<T>();
         Task<T> Add<T>(T entity);
         Task<T> Update<T>(T entity);
-        Task Delete<T>(string id);
+
+        Task<OfficeEntity> GetOfficeUserByEmail(string email);
+        Task<SecurityEntity> GetSecurityUserByEmail(string email);
+        /* Task Delete<T>(string id);*/
 
     }
 }
