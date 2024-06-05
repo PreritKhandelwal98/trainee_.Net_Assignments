@@ -1,8 +1,11 @@
-﻿using VisitorSecurityClearanceSystem.CosmoDB;
+﻿using System.Reflection.Metadata;
+using System.Xml.Linq;
+using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.DTO;
 using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
-
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
 namespace VisitorSecurityClearanceSystem.Services
 {
     public class VisitorService: IVisitorService
@@ -83,13 +86,12 @@ namespace VisitorSecurityClearanceSystem.Services
         public async Task<VisitorDTO> UpdateVisitorStatus(string visitorId, bool newStatus)
         {
             var visitor = await _cosmoDBService.GetVisitorById(visitorId);
-            if (visitor == null) throw new Exception("Visitor not found");
+            if (visitor == null)
+                throw new Exception("Visitor not found");
 
             visitor.PassStatus = newStatus;
             await _cosmoDBService.Update(visitor);
 
-
-            
             // Prepare email details
             string subject = "Your Visitor Status Has Been Updated";
             string toEmail = visitor.Email;  // Send to visitor's email
@@ -102,10 +104,16 @@ namespace VisitorSecurityClearanceSystem.Services
                              "If you have any questions or need further assistance, please contact us.\n\n" +
                              "Thank you,\nVisitor Management System";
 
-            // Send the email
-            EmailSender emailSender = new EmailSender();
-            await emailSender.SendEmail(subject, toEmail, userName, message);
+            // If the status is true, generate the PDF and attach it to the email
+            byte[] pdfBytes = null;
+            if (newStatus)
+            {
+                pdfBytes = GenerateVisitorPassPdf(visitor);
+            }
 
+            // Send the email with or without the PDF attachment
+            EmailSender emailSender = new EmailSender();
+            await emailSender.SendEmail(subject, toEmail, userName, message, pdfBytes);
 
             return new VisitorDTO
             {
@@ -115,6 +123,40 @@ namespace VisitorSecurityClearanceSystem.Services
                 PassStatus = visitor.PassStatus,
                 // Map other properties as needed
             };
+        }
+
+        private byte[] GenerateVisitorPassPdf(VisitorEntity visitor)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                // Create a new PDF document
+                PdfDocument document = new PdfDocument();
+                PdfPage page = document.AddPage();
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+
+                // Define fonts
+                XFont titleFont = new XFont("Arial", 20, XFontStyle.Bold);
+                XFont normalFont = new XFont("Arial", 12);
+
+                // Draw title
+                gfx.DrawString("Visitor Pass", titleFont, XBrushes.Black, new XRect(0, 20, page.Width.Point, page.Height.Point), XStringFormats.Center);
+
+                // Draw visitor details
+                int yOffset = 60;
+                gfx.DrawString($"Name: {visitor.Name}", normalFont, XBrushes.Black, new XRect(50, yOffset, page.Width.Point - 100, page.Height.Point), XStringFormats.TopLeft);
+                yOffset += 20;
+                gfx.DrawString($"Email: {visitor.Email}", normalFont, XBrushes.Black, new XRect(50, yOffset, page.Width.Point - 100, page.Height.Point), XStringFormats.TopLeft);
+                yOffset += 20;
+                gfx.DrawString($"Phone: {visitor.Phone}", normalFont, XBrushes.Black, new XRect(50, yOffset, page.Width.Point - 100, page.Height.Point), XStringFormats.TopLeft);
+                yOffset += 20;
+                gfx.DrawString($"Purpose of Visit: {visitor.Purpose}", normalFont, XBrushes.Black, new XRect(50, yOffset, page.Width.Point - 100, page.Height.Point), XStringFormats.TopLeft);
+
+                // Save the PDF to memory stream
+                document.Save(ms);
+                ms.Position = 0;
+
+                return ms.ToArray();
+            }
         }
 
         /*public async Task DeleteVisitor(string id)

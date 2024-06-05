@@ -63,3 +63,8 @@ E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\Visit
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\PdfSharpCore.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\SixLabors.Fonts.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\de\PdfSharpCore.resources.dll
