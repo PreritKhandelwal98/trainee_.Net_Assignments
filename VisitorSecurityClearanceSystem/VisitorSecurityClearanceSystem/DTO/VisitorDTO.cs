@@ -7,9 +7,6 @@ namespace VisitorSecurityClearanceSystem.DTO
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("visitorId")]
-        public string VisitorId { get; set; }
-
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -34,7 +31,10 @@ namespace VisitorSecurityClearanceSystem.DTO
         [JsonProperty("exitTime")]
         public DateTime ExitTime { get; set; }
 
-        [JsonProperty("status")]
-        public bool Status { get; set; }
+        [JsonProperty("passStatus")]
+        public DateTime PassStatus { get; set; }
+
+        [JsonProperty("role")]
+        public bool Role { get; set; }
     }
 }
