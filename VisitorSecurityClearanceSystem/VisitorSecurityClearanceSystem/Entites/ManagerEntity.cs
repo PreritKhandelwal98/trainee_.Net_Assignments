@@ -9,7 +9,7 @@ namespace VisitorSecurityClearanceSystem.Entites
         public string Id { get; set; }
 
         [JsonProperty(PropertyName = "name", NullValueHandling = NullValueHandling.Ignore)]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty(PropertyName = "phone", NullValueHandling = NullValueHandling.Ignore)]
         public int Phone { get; set; }

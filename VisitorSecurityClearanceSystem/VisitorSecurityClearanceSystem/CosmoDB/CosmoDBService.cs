@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.Azure.Cosmos;
+using System.ComponentModel;
 using VisitorSecurityClearanceSystem.Common;
 using VisitorSecurityClearanceSystem.Entites;
 
@@ -7,7 +8,7 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
     public class CosmoDBService:ICosmoDBService
     {
         private readonly CosmosClient _cosmosClient;
-        private readonly Container _container;
+        private readonly Microsoft.Azure.Cosmos.Container _container;
 
         public CosmoDBService()
         {
@@ -50,15 +51,9 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
         {
             var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
                                   .Where(q => q.Email == email && q.Active && !q.Archived)
-                                  .ToFeedIterator();
+                                  .FirstOrDefault();
 
-            if (query.HasMoreResults)
-            {
-                var resultSet = await query.ReadNextAsync();
-                return resultSet.FirstOrDefault();
-            }
-
-            return null;
+            return query;
         }
 
         public Task<T> GetById<T>(int id)
@@ -73,19 +68,9 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             {
                 var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
                                       .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .ToFeedIterator();
+                                      .FirstOrDefault();
 
-                while (query.HasMoreResults)
-                {
-                    var resultSet = await query.ReadNextAsync();
-                    var visitor = resultSet.FirstOrDefault();
-                    if (visitor != null)
-                    {
-                        return visitor;
-                    }
-                }
-
-                return null;
+                return query;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -99,19 +84,11 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             {
                 var query = _container.GetItemLinqQueryable<SecurityEntity>(true)
                                       .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .ToFeedIterator();
+                                      .FirstOrDefault();
 
-                while (query.HasMoreResults)
-                {
-                    var resultSet = await query.ReadNextAsync();
-                    var security = resultSet.FirstOrDefault();
-                    if (security != null)
-                    {
-                        return security;
-                    }
-                }
+                
 
-                return null;
+                return query;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -124,19 +101,11 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             {
                 var query = _container.GetItemLinqQueryable<ManagerEntity>(true)
                                       .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .ToFeedIterator();
+                                      .FirstOrDefault();
 
-                while (query.HasMoreResults)
-                {
-                    var resultSet = await query.ReadNextAsync();
-                    var manager = resultSet.FirstOrDefault();
-                    if (manager != null)
-                    {
-                        return manager;
-                    }
-                }
+           
 
-                return null;
+                return query;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -150,19 +119,11 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             {
                 var query = _container.GetItemLinqQueryable<OfficeEntity>(true)
                                       .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .ToFeedIterator();
+                                      .FirstOrDefault();
 
-                while (query.HasMoreResults)
-                {
-                    var resultSet = await query.ReadNextAsync();
-                    var office = resultSet.FirstOrDefault();
-                    if (office != null)
-                    {
-                        return office;
-                    }
-                }
+               
 
-                return null;
+                return query;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
             {

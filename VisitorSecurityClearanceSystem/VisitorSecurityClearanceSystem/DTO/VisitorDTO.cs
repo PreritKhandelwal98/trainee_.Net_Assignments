@@ -32,7 +32,7 @@ namespace VisitorSecurityClearanceSystem.DTO
         public DateTime ExitTime { get; set; }
 
         [JsonProperty("passStatus")]
-        public DateTime PassStatus { get; set; }
+        public bool PassStatus { get; set; }
 
         [JsonProperty("role")]
         public bool Role { get; set; }

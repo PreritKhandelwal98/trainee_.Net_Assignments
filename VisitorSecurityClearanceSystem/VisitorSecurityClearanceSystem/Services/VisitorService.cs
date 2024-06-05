@@ -1,5 +1,6 @@
 ﻿using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.DTO;
+using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
 
 namespace VisitorSecurityClearanceSystem.Services
@@ -74,7 +75,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 throw new Exception("Manager not found");
             }
             visitorEntity = MapDTOToEntity(visitorModel);
-            visitorEntity.VisitorId = id;
+            visitorEntity.Id = id;
             var response = await _cosmoDBService.Update(visitorEntity);
             return MapEntityToDTO(response);
         }
@@ -89,7 +90,6 @@ namespace VisitorSecurityClearanceSystem.Services
             return new VisitorEntity
             {
                 Id = visitorModel.Id,
-                VisitorId = visitorModel.VisitorId,
                 Name = visitorModel.Name,
                 Email = visitorModel.Email,
                 Phone = visitorModel.Phone,
@@ -98,7 +98,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Purpose = visitorModel.Purpose,
                 EntryTime = visitorModel.EntryTime,
                 ExitTime = visitorModel.ExitTime,
-                Status = false,
+                PassStatus = false,
             };
         }
 
@@ -108,7 +108,6 @@ namespace VisitorSecurityClearanceSystem.Services
             return new VisitorDTO
             {
                 Id = visitorEntity.Id,
-                VisitorId = visitorEntity.VisitorId,
                 Name = visitorEntity.Name,
                 Email = visitorEntity.Email,
                 Phone = visitorEntity.Phone,
@@ -117,7 +116,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Purpose = visitorEntity.Purpose,
                 EntryTime = visitorEntity.EntryTime,
                 ExitTime = visitorEntity.ExitTime,
-                Status = false,
+                PassStatus = false
             };
         }
     }

@@ -1,5 +1,6 @@
 ﻿using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.DTO;
+using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
 
 namespace VisitorSecurityClearanceSystem.Services
