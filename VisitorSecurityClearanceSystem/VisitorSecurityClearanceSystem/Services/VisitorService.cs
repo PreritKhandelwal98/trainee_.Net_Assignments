@@ -80,6 +80,43 @@ namespace VisitorSecurityClearanceSystem.Services
             return MapEntityToDTO(response);
         }
 
+        public async Task<VisitorDTO> UpdateVisitorStatus(string visitorId, bool newStatus)
+        {
+            var visitor = await _cosmoDBService.GetVisitorById(visitorId);
+            if (visitor == null) throw new Exception("Visitor not found");
+
+            visitor.PassStatus = newStatus;
+            await _cosmoDBService.Update(visitor);
+
+
+            
+            // Prepare email details
+            string subject = "Your Visitor Status Has Been Updated";
+            string toEmail = visitor.Email;  // Send to visitor's email
+            string userName = visitor.Name;
+
+            // Construct the email message with the new status details
+            string message = $"Dear {userName},\n\n" +
+                             $"We wanted to inform you that your visitor status has been updated.\n\n" +
+                             $"New Status: {newStatus}\n\n" +
+                             "If you have any questions or need further assistance, please contact us.\n\n" +
+                             "Thank you,\nVisitor Management System";
+
+            // Send the email
+            EmailSender emailSender = new EmailSender();
+            await emailSender.SendEmail(subject, toEmail, userName, message);
+
+
+            return new VisitorDTO
+            {
+                Id = visitor.Id,
+                Name = visitor.Name,
+                Email = visitor.Email,
+                PassStatus = visitor.PassStatus,
+                // Map other properties as needed
+            };
+        }
+
         /*public async Task DeleteVisitor(string id)
         {
             await _cosmoDBService.Delete<VisitorEntity>(id);

@@ -10,6 +10,7 @@ namespace VisitorSecurityClearanceSystem.Controllers
     public class OfficeUserController : Controller
     {
         private readonly IOfficeService _officeService;
+        private readonly IVisitorService _visitorService;
 
 
         public OfficeUserController(IOfficeService officeService)
@@ -46,6 +47,21 @@ namespace VisitorSecurityClearanceSystem.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in UpdateVisitor (Controller): {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPut("{visitorId}")]
+        public async Task<IActionResult> UpdateVisitorStatus(string visitorId, bool newStatus)
+        {
+            try
+            {
+                var updatedVisitor = await _visitorService.UpdateVisitorStatus(visitorId, newStatus);
+                return Ok(updatedVisitor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UpdateVisitorStatus (Controller): {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

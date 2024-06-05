@@ -12,16 +12,18 @@ namespace VisitorSecurityClearanceSystem.Controllers
         private readonly IManagerService _managerService;
         private readonly IOfficeService _officeService;
         private readonly ISecurityService _securityService;
+        private readonly IVisitorService _visitorService;
 
-
-        public ManagerController(IManagerService managerService, IOfficeService officeService, ISecurityService securityService)
+        public ManagerController(IManagerService managerService, IOfficeService officeService, ISecurityService securityService, IVisitorService visitorService)
         {
             _managerService = managerService;
             _officeService = officeService;
             _securityService = securityService;
+            _visitorService = visitorService;
+
         }
 
-        [HttpPost]
+    [HttpPost]
         public async Task<ManagerDTO> AddManager(ManagerDTO managerModel)
         {
             return await _managerService.AddManager(managerModel);
@@ -61,6 +63,21 @@ namespace VisitorSecurityClearanceSystem.Controllers
         {
             var security = await _securityService.AddSecurity(securityModel);
             return Ok(security);
+        }
+
+        [HttpPut("{visitorId}")]
+        public async Task<IActionResult> UpdateVisitorStatus(string visitorId,  bool newStatus)
+        {
+            try
+            {
+                var updatedVisitor = await _visitorService.UpdateVisitorStatus(visitorId, newStatus);
+                return Ok(updatedVisitor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UpdateVisitorStatus (Controller): {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
 

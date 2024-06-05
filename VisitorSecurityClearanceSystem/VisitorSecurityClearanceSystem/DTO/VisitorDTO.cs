@@ -35,6 +35,6 @@ namespace VisitorSecurityClearanceSystem.DTO
         public bool PassStatus { get; set; }
 
         [JsonProperty("role")]
-        public bool Role { get; set; }
+        public string Role { get; set; }
     }
 }

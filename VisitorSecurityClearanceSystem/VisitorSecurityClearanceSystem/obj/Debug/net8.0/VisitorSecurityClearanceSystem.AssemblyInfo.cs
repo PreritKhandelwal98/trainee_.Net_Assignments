@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VisitorSecurityClearanceSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+415ddfd26a17572c108c3b95e59f3629af3cab28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a6392c548bedbade368ef4e65f2e65d53424ce1")]
 [assembly: System.Reflection.AssemblyProductAttribute("VisitorSecurityClearanceSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VisitorSecurityClearanceSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
