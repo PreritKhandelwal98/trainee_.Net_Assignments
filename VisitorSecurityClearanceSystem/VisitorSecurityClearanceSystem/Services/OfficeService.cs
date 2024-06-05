@@ -1,4 +1,5 @@
-﻿using VisitorSecurityClearanceSystem.CosmoDB;
+﻿using AutoMapper;
+using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.DTO;
 using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
@@ -8,17 +9,18 @@ namespace VisitorSecurityClearanceSystem.Services
     public class OfficeService:IOfficeService
     {
         private readonly ICosmoDBService _cosmoDBService;
-
-        public OfficeService(ICosmoDBService cosmoDBService)
+        private readonly IMapper _autoMapper;
+        public OfficeService(ICosmoDBService cosmoDBService, IMapper mapper)
         {
             _cosmoDBService = cosmoDBService;
+            _autoMapper = mapper;
         }
 
         public async Task<OfficeDTO> AddOffice(OfficeDTO officeModel)
         {
 
             // Map the DTO to an Entity
-            var officeEntity = MapDTOToEntity(officeModel);
+            var officeEntity = _autoMapper.Map<OfficeEntity>(officeModel);
 
             // Initialize the Entity
             officeEntity.Intialize(true, "security", "Prerit", "Prerit");
@@ -27,13 +29,13 @@ namespace VisitorSecurityClearanceSystem.Services
             var response = await _cosmoDBService.Add(officeEntity);
 
             // Map the response back to a DTO
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<OfficeDTO>(response);
         }
 
         public async Task<OfficeDTO> GetOfficeById(string id)
         {
             var office = await _cosmoDBService.GetOfficeById(id); // Call non-generic method
-            return MapEntityToDTO(office);
+            return _autoMapper.Map<OfficeDTO>(office);
         }
 
         public async Task<OfficeDTO> UpdateOffice(string id, OfficeDTO officeModel)
@@ -43,10 +45,10 @@ namespace VisitorSecurityClearanceSystem.Services
             {
                 throw new Exception("Office not found");
             }
-            officeEntity = MapDTOToEntity(officeModel);
+            officeEntity = _autoMapper.Map<OfficeEntity>(officeModel);
             officeEntity.Id = id;
             var response = await _cosmoDBService.Update(officeEntity);
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<OfficeDTO>(response);
         }
 
         /*public async Task DeleteOffice(string id)
@@ -75,29 +77,6 @@ namespace VisitorSecurityClearanceSystem.Services
             };
 
             return officeDto;
-        }
-        private OfficeEntity MapDTOToEntity(OfficeDTO officeModel)
-        {
-            return new OfficeEntity
-            {
-                Id = officeModel.Id,
-                Name = officeModel.Name,
-                Email = officeModel.Email,
-                Phone = officeModel.Phone,
-                Role = "Office"
-            };
-        }
-
-        private OfficeDTO MapEntityToDTO(OfficeEntity officeEntity)
-        {
-            if (officeEntity == null) return null;
-            return new OfficeDTO
-            {
-                Id = officeEntity.Id,
-                Name = officeEntity.Name,
-                Email = officeEntity.Email,
-                Phone = officeEntity.Phone,
-            };
         }
     }
 }

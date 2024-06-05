@@ -6,16 +6,19 @@ using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
+using AutoMapper;
 
 namespace VisitorSecurityClearanceSystem.Services
 {
     public class VisitorService: IVisitorService
     {
         private readonly ICosmoDBService _cosmoDBService;
-
-        public VisitorService(ICosmoDBService cosmoDBService)
+        private readonly IMapper _autoMapper;
+        public VisitorService(ICosmoDBService cosmoDBService, IMapper mapper)
         {
             _cosmoDBService = cosmoDBService;
+            _autoMapper = mapper;
+
         }
 
         public async Task<VisitorDTO> AddVisitor(VisitorDTO visitorModel)
@@ -27,7 +30,7 @@ namespace VisitorSecurityClearanceSystem.Services
             }
 
             // Map the DTO to an Entity
-            var visitorEntity = MapDTOToEntity(visitorModel);
+            var visitorEntity = _autoMapper.Map<VisitorEntity>(visitorModel);
 
             // Initialize the Entity
             visitorEntity.Intialize(true, "visitor", "Prerit", "Prerit");
@@ -56,7 +59,7 @@ namespace VisitorSecurityClearanceSystem.Services
             await emailSender.SendEmail(subject, toEmail, userName, message);
 
             // Map the response back to a DTO
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<VisitorDTO>(response);
         }
 
         public async Task<IEnumerable<VisitorDTO>> GetAllVisitors()
@@ -68,7 +71,7 @@ namespace VisitorSecurityClearanceSystem.Services
         public async Task<VisitorDTO> GetVisitorById(string id)
         {
             var visitor = await _cosmoDBService.GetVisitorById(id); // Call non-generic method
-            return MapEntityToDTO(visitor);
+            return _autoMapper.Map<VisitorDTO>(visitor);
         }
 
         public async Task<List<VisitorDTO>> GetVisitorsByStatus(bool status)
@@ -86,10 +89,10 @@ namespace VisitorSecurityClearanceSystem.Services
             {
                 throw new Exception("Manager not found");
             }
-            visitorEntity = MapDTOToEntity(visitorModel);
+            visitorEntity = _autoMapper.Map<VisitorEntity>(visitorModel); ;
             visitorEntity.Id = id;
             var response = await _cosmoDBService.Update(visitorEntity);
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<VisitorDTO>(response);
         }
 
         public async Task<VisitorDTO> UpdateVisitorStatus(string visitorId, bool newStatus)

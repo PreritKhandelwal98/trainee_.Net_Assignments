@@ -1,4 +1,5 @@
-﻿using VisitorSecurityClearanceSystem.CosmoDB;
+﻿using AutoMapper;
+using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.DTO;
 using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
@@ -8,17 +9,19 @@ namespace VisitorSecurityClearanceSystem.Services
     public class ManagerService:IManagerService
     {
         private readonly ICosmoDBService _cosmoDBService;
+        private readonly IMapper _autoMapper;
 
-        public ManagerService(ICosmoDBService cosmoDBService)
+        public ManagerService(ICosmoDBService cosmoDBService, IMapper mapper)
         {
             _cosmoDBService = cosmoDBService;
+            _autoMapper = mapper;
         }
 
         public async Task<ManagerDTO> AddManager(ManagerDTO managerModel)
         {
 
             // Map the DTO to an Entity
-            var managerEntity = MapDTOToEntity(managerModel);
+            var managerEntity = _autoMapper.Map<ManagerEntity>(managerModel);
 
             // Initialize the Entity
             managerEntity.Intialize(true, "manager", "Prerit", "Prerit");
@@ -27,13 +30,13 @@ namespace VisitorSecurityClearanceSystem.Services
             var response = await _cosmoDBService.Add(managerEntity);
 
             // Map the response back to a DTO
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<ManagerDTO>(response);
         }
 
         public async Task<ManagerDTO> GetManagerById(string id)
         {
             var security = await _cosmoDBService.GetManagerById(id); // Call non-generic method
-            return MapEntityToDTO(security);
+            return _autoMapper.Map<ManagerDTO>(security);
         }
 
         public async Task<ManagerDTO> UpdateManager(string id, ManagerDTO managerModel)
@@ -43,7 +46,7 @@ namespace VisitorSecurityClearanceSystem.Services
             {
                 throw new Exception("Manager not found");
             }
-            managerEntity = MapDTOToEntity(managerModel);
+            managerEntity = _autoMapper.Map<ManagerEntity>(managerModel);
             managerEntity.Id = id;
             var response = await _cosmoDBService.Update(managerEntity);
             return MapEntityToDTO(response);
@@ -53,32 +56,5 @@ namespace VisitorSecurityClearanceSystem.Services
         {
             await _cosmoDBService.Delete<ManagerEntity>(id);
         }*/
-
-        private ManagerEntity MapDTOToEntity(ManagerDTO managerModel)
-        {
-            return new ManagerEntity
-            {
-                Id = managerModel.Id,
-                Name = managerModel.Name,
-                Email = managerModel.Email,
-                Phone = managerModel.Phone,
-                Role = managerModel.Role,
-                
-            };
-        }
-
-        private ManagerDTO MapEntityToDTO(ManagerEntity managerEntity)
-        {
-            if (managerEntity == null) return null;
-            return new ManagerDTO
-            {
-                Id = managerEntity.Id,
-                Name = managerEntity.Name,
-                Email = managerEntity.Email,
-                Phone = managerEntity.Phone,
-                Role = managerEntity.Role,
-                
-            };
-        }
     }
 }
