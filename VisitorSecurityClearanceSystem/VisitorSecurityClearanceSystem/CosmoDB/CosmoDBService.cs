@@ -168,5 +168,24 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                 return null;
             }
         }
+
+        public async Task<List<VisitorEntity>> GetVisitorByStatus(bool status)
+        {
+            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
+                                  .Where(v => v.PassStatus == status && v.Active && !v.Archived)
+                                  .AsQueryable();
+
+            var iterator = query.ToFeedIterator();
+            var results = new List<VisitorEntity>();
+
+            while (iterator.HasMoreResults)
+            {
+                var response = await iterator.ReadNextAsync();
+                results.AddRange(response);
+            }
+
+            return results;
+        }
+
     }
 }

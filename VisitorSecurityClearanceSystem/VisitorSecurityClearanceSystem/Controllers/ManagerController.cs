@@ -80,6 +80,14 @@ namespace VisitorSecurityClearanceSystem.Controllers
             }
         }
 
+        [HttpGet("{status}")]
+        public async Task<IActionResult> GetVisitorsByStatus(bool status)
+        {
+            var visitors = await _visitorService.GetVisitorsByStatus(status);
+            return Ok(visitors);
+        }
+
+
 
         /*[HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSecurity(string id)

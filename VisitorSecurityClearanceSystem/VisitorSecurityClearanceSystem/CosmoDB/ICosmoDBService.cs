@@ -5,6 +5,7 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
     public interface ICosmoDBService
     {
         Task<VisitorEntity> GetVisitorByEmail(string email);
+        Task<List<VisitorEntity>> GetVisitorByStatus(bool status);
         Task<VisitorEntity> GetVisitorById(string id);
         Task<SecurityEntity> GetSecurityById(string id);
         Task<ManagerEntity> GetManagerById(string id);

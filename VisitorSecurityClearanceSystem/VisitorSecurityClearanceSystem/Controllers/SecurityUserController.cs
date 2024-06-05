@@ -10,10 +10,11 @@ namespace VisitorSecurityClearanceSystem.Controllers
     public class SecurityUserController : Controller
     {
         private readonly ISecurityService _securityService;
-
-        public SecurityUserController(ISecurityService securityService)
+        private readonly IVisitorService _visitorService;
+        public SecurityUserController(ISecurityService securityService,IVisitorService visitorService)
         {
             _securityService = securityService;
+            _visitorService = visitorService;
         }
 
         [HttpPost]
@@ -27,6 +28,20 @@ namespace VisitorSecurityClearanceSystem.Controllers
 
             return Ok(securityUser);
         }
+
+        [HttpGet("{status}")]
+        public async Task<IActionResult> GetVisitorsByStatus(bool status)
+        {
+            var visitors = await _visitorService.GetVisitorsByStatus(status);
+            return Ok(visitors);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<VisitorDTO> GetVisitorById(string id)
+        {
+            return await _visitorService.GetVisitorById(id);
+        }
+
 
 
         [HttpGet("{id}")]

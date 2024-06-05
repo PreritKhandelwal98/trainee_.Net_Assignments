@@ -6,6 +6,7 @@ using VisitorSecurityClearanceSystem.Entites;
 using VisitorSecurityClearanceSystem.Interface;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
+
 namespace VisitorSecurityClearanceSystem.Services
 {
     public class VisitorService: IVisitorService
@@ -69,6 +70,14 @@ namespace VisitorSecurityClearanceSystem.Services
             var visitor = await _cosmoDBService.GetVisitorById(id); // Call non-generic method
             return MapEntityToDTO(visitor);
         }
+
+        public async Task<List<VisitorDTO>> GetVisitorsByStatus(bool status)
+        {
+            var visitors = await _cosmoDBService.GetVisitorByStatus(status);
+            var visitorDTOs = visitors.Select(MapEntityToDTO).ToList();
+            return visitorDTOs;
+        }
+
 
         public async Task<VisitorDTO> UpdateVisitor(string id, VisitorDTO visitorModel)
         {
@@ -177,6 +186,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Purpose = visitorModel.Purpose,
                 EntryTime = visitorModel.EntryTime,
                 ExitTime = visitorModel.ExitTime,
+                Role= "visitor",
                 PassStatus = false,
             };
         }
@@ -195,6 +205,7 @@ namespace VisitorSecurityClearanceSystem.Services
                 Purpose = visitorEntity.Purpose,
                 EntryTime = visitorEntity.EntryTime,
                 ExitTime = visitorEntity.ExitTime,
+                Role = "visitor",
                 PassStatus = false
             };
         }
