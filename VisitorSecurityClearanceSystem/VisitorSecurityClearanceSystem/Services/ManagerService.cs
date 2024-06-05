@@ -49,7 +49,7 @@ namespace VisitorSecurityClearanceSystem.Services
             managerEntity = _autoMapper.Map<ManagerEntity>(managerModel);
             managerEntity.Id = id;
             var response = await _cosmoDBService.Update(managerEntity);
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<ManagerDTO>(response);
         }
 
         /*public async Task DeleteManager(string id)

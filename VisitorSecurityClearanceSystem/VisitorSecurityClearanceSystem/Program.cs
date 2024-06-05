@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Hosting;
+using VisitorSecurityClearanceSystem.Common;
 using VisitorSecurityClearanceSystem.CosmoDB;
 using VisitorSecurityClearanceSystem.Interface;
 using VisitorSecurityClearanceSystem.Services;
@@ -16,6 +18,7 @@ builder.Services.AddScoped<IOfficeService, OfficeService>();
 builder.Services.AddScoped<IVisitorService, VisitorService>();
 builder.Services.AddScoped<ISecurityService, SecurityService>();
 builder.Services.AddScoped<ICosmoDBService, CosmoDBService>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -17,7 +17,7 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
 
         Task<OfficeEntity> GetOfficeUserByEmail(string email);
         Task<SecurityEntity> GetSecurityUserByEmail(string email);
-        /* Task Delete<T>(string id);*/
+        /*Task Delete<T>(string id);*/
 
     }
 }

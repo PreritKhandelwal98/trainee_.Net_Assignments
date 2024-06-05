@@ -68,3 +68,4 @@ E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\Visit
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\SixLabors.Fonts.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\de\PdfSharpCore.resources.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\AutoMapper.dll
