@@ -21,11 +21,11 @@ namespace VisitorSecurityClearanceSystem.Controllers
             return await _visitorService.AddVisitor(visitorModel);
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public async Task<IEnumerable<VisitorDTO>> GetAllVisitors()
         {
             return await _visitorService.GetAllVisitors();
-        }
+        }*/
 
         [HttpGet("{id}")]
         public async Task<VisitorDTO> GetVisitorById(string id)

@@ -23,7 +23,7 @@ namespace VisitorSecurityClearanceSystem.Services
             var officeEntity = _autoMapper.Map<OfficeEntity>(officeModel);
 
             // Initialize the Entity
-            officeEntity.Intialize(true, "security", "Prerit", "Prerit");
+            officeEntity.Intialize(true, "office", "Prerit", "Prerit");
 
             // Add the entity to the database
             var response = await _cosmoDBService.Add(officeEntity);
@@ -73,7 +73,9 @@ namespace VisitorSecurityClearanceSystem.Services
                 Id = officeUser.Id,
                 Name = officeUser.Name,
                 Email = officeUser.Email,
-                // Add other properties here
+                Phone = officeUser.Phone,
+                Role= officeUser.Role,
+                
             };
 
             return officeDto;
