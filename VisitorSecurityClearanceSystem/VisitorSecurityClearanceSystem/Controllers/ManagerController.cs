@@ -51,6 +51,13 @@ namespace VisitorSecurityClearanceSystem.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteManager(string id)
+        {
+            await _managerService.DeleteManager(id);
+            return NoContent();
+        }
         [HttpPost]
         public async Task<IActionResult> AddOfficeUser(OfficeDTO officeModel)
         {
@@ -89,11 +96,6 @@ namespace VisitorSecurityClearanceSystem.Controllers
 
 
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSecurity(string id)
-        {
-            await _managerService.DeleteManager(id);
-            return NoContent();
-        }
+        
     }
 }
