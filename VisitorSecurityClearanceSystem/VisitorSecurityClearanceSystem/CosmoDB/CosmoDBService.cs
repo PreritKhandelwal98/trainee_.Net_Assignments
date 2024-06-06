@@ -43,10 +43,49 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             return response.Resource;
         }
 
-        /*public async Task Delete<T>(string id)
+        public async Task DeleteVisitor(string id)
         {
-            await _container.ReplaceItemAsync<T>(id);
-        }*/
+            var visitor = await GetVisitorById(id);
+            if (visitor != null)
+            {
+                visitor.Active = false;
+                visitor.Archived = true;
+                await Update(visitor);
+            }
+        }
+
+        public async Task DeleteManager(string id)
+        {
+            var manager = await GetManagerById(id);
+            if (manager != null)
+            {
+                manager.Active = false;
+                manager.Archived = true;
+                await Update(manager);
+            }
+        }
+
+        public async Task DeleteSecurity(string id)
+        {
+            var security = await GetSecurityById(id);
+            if (security != null)
+            {
+                security.Active = false;
+                security.Archived = true;
+                await Update(security);
+            }
+        }
+
+        public async Task DeleteOffice(string id)
+        {
+            var office = await GetOfficeById(id);
+            if (office != null)
+            {
+                office.Active = false;
+                office.Archived = true;
+                await Update(office);
+            }
+        }
 
         public async Task<OfficeEntity> GetOfficeUserByEmail(string email)
         {

@@ -48,17 +48,12 @@ namespace VisitorSecurityClearanceSystem.Controllers
             }
         }
 
-        /*[HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVisitor(string id)
         {
             await _visitorService.DeleteVisitor(id);
             return NoContent();
-        }*/
+        }
 
-        /*[HttpGet]
-        public async Task<List<VisitorDTO>> GetVisitorsByStatus(string status)
-        {
-            return await _visitorService.GetVisitorsByStatus(status);
-        }*/
     }
 }

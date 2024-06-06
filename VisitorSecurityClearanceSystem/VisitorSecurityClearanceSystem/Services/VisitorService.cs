@@ -171,10 +171,10 @@ namespace VisitorSecurityClearanceSystem.Services
             }
         }
 
-        /*public async Task DeleteVisitor(string id)
+        public async Task DeleteVisitor(string id)
         {
-            await _cosmoDBService.Delete<VisitorEntity>(id);
-        }*/
+            await _cosmoDBService.DeleteVisitor(id);
+        }
 
         private VisitorEntity MapDTOToEntity(VisitorDTO visitorModel)
         {

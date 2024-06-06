@@ -65,11 +65,11 @@ namespace VisitorSecurityClearanceSystem.Controllers
             }
         }
 
-        /*[HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSecurity(string id)
         {
             await _securityService.DeleteSecurity(id);
             return NoContent();
-        }*/
+        }
     }
 }

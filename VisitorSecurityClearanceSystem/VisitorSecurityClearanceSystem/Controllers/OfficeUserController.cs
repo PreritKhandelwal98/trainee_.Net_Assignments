@@ -74,11 +74,11 @@ namespace VisitorSecurityClearanceSystem.Controllers
         }
 
 
-        /*[HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOffice(string id)
         {
             await _officeService.DeleteOffice(id);
             return NoContent();
-        }*/
+        }
     }
 }

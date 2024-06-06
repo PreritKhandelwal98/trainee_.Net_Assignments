@@ -6,7 +6,7 @@ using VisitorSecurityClearanceSystem.Interface;
 
 namespace VisitorSecurityClearanceSystem.Services
 {
-    public class ManagerService:IManagerService
+    public class ManagerService : IManagerService
     {
         private readonly ICosmoDBService _cosmoDBService;
         private readonly IMapper _autoMapper;
@@ -52,9 +52,11 @@ namespace VisitorSecurityClearanceSystem.Services
             return _autoMapper.Map<ManagerDTO>(response);
         }
 
-        /*public async Task DeleteManager(string id)
+        public async Task DeleteManager(string id)
         {
-            await _cosmoDBService.Delete<ManagerEntity>(id);
-        }*/
+            await _cosmoDBService.DeleteManager(id);
+        }
+
+       
     }
 }

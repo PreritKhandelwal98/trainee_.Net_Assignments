@@ -51,10 +51,10 @@ namespace VisitorSecurityClearanceSystem.Services
             return _autoMapper.Map<OfficeDTO>(response);
         }
 
-        /*public async Task DeleteOffice(string id)
+        public async Task DeleteOffice(string id)
         {
-            await _cosmoDBService.Delete<SecurityEntity>(id);
-        }*/
+            await _cosmoDBService.DeleteVisitor(id);
+        }
 
 
         public async Task<OfficeDTO> LoginOfficeUser(string email, string password)

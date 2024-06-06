@@ -7,9 +7,9 @@ namespace VisitorSecurityClearanceSystem.Interface
         Task<ManagerDTO> AddManager(ManagerDTO managerModel);
         Task<ManagerDTO> GetManagerById(string id);
         Task<ManagerDTO> UpdateManager(string id, ManagerDTO managerModel);
-        /*      Task DeleteManager(string id);
-        */
-         
+        Task DeleteManager(string id);
+
+
 
     }
 }
