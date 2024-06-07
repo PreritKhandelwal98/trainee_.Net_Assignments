@@ -64,7 +64,7 @@ namespace VisitorSecurityClearanceSystem.Services
 
         public async Task<IEnumerable<VisitorDTO>> GetAllVisitors()
         {
-            var visitors = await _cosmoDBService.GetAll<VisitorEntity>();
+            var visitors = await _cosmoDBService.GetAllVisitor();
             return visitors.Select(MapEntityToDTO).ToList();
         }
 

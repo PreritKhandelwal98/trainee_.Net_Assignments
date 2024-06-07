@@ -10,6 +10,8 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
         Task<SecurityEntity> GetSecurityById(string id);
         Task<ManagerEntity> GetManagerById(string id);
         Task<OfficeEntity> GetOfficeById(string id);
+
+        Task<IEnumerable<VisitorEntity>> GetAllVisitor();
         Task<T> GetById<T>(int id);
         Task<IEnumerable<T>> GetAll<T>();
         Task<T> Add<T>(T entity);

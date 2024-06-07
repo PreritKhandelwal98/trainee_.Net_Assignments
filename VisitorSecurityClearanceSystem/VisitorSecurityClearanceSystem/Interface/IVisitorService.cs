@@ -12,6 +12,5 @@ namespace VisitorSecurityClearanceSystem.Interface
         Task<List<VisitorDTO>> GetVisitorsByStatus(bool status);
 
         Task DeleteVisitor(string id);
-        /*Task<IEnumerable<VisitorDTO>> GetVisitorsByStatus(string status);*/
     }
 }

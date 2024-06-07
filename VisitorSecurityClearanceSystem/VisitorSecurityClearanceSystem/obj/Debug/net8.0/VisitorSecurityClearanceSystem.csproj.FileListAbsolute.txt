@@ -58,9 +58,6 @@ E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\Visit
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win-x64\native\msvcp140.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win-x64\native\vcruntime140.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win-x64\native\vcruntime140_1.dll
-E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\PdfSharpCore.dll
@@ -69,3 +66,9 @@ E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\Visit
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\de\PdfSharpCore.resources.dll
 E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\AutoMapper.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\EPPlus.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\EPPlus.Interfaces.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Job\CentraLogic\trainee_.Net_Assignments\VisitorSecurityClearanceSystem\VisitorSecurityClearanceSystem\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll

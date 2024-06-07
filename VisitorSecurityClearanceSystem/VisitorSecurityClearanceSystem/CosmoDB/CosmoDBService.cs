@@ -17,12 +17,22 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             _container = _cosmosClient.GetContainer(Credentials.DatabaseName, Credentials.ContainerName);
         }
 
+        //Generic Function for All
+
         public async Task<T> Add<T>(T data)
         {
             var response = await _container.CreateItemAsync(data);
             return response.Resource;
         }
-
+        public async Task<T> Update<T>(T data)
+        {
+            var response = await _container.UpsertItemAsync(data);
+            return response.Resource;
+        }
+        public Task<T> GetById<T>(int id)
+        {
+            throw new NotImplementedException();
+        }
         public async Task<IEnumerable<T>> GetAll<T>()
         {
             var query = _container.GetItemQueryIterator<T>();
@@ -37,12 +47,31 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             return results;
         }
 
-        public async Task<T> Update<T>(T data)
-        {
-            var response = await _container.UpsertItemAsync(data);
-            return response.Resource;
-        }
 
+        //Visitor's Function 
+        public async Task<VisitorEntity> GetVisitorByEmail(string email)
+        {
+            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
+                                  .Where(q => q.Email == email && q.Active && !q.Archived)
+                                  .FirstOrDefault();
+
+            return query;
+        }
+        public async Task<VisitorEntity> GetVisitorById(string id)
+        {
+            try
+            {
+                var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
+                                      .Where(q => q.Id == id && q.Active && !q.Archived)
+                                      .FirstOrDefault();
+
+                return query;
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+        }
         public async Task DeleteVisitor(string id)
         {
             var visitor = await GetVisitorById(id);
@@ -53,7 +82,43 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                 await Update(visitor);
             }
         }
+        public async Task<List<VisitorEntity>> GetVisitorByStatus(bool status)
+        {
+            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
+                                  .Where(v => v.PassStatus == status && v.Active && !v.Archived)
+                                  .AsQueryable();
 
+            var iterator = query.ToFeedIterator();
+            var results = new List<VisitorEntity>();
+
+            while (iterator.HasMoreResults)
+            {
+                var response = await iterator.ReadNextAsync();
+                results.AddRange(response);
+            }
+
+            return results;
+        }
+        public async Task<IEnumerable<VisitorEntity>> GetAllVisitor()
+        {
+            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
+                                  .Where(s => s.DocumentType == "visitor" && s.Active && !s.Archived)
+                                  .AsQueryable();
+
+            var iterator = query.ToFeedIterator();
+            var results = new List<VisitorEntity>();
+
+            while (iterator.HasMoreResults)
+            {
+                var response = await iterator.ReadNextAsync();
+                results.AddRange(response);
+            }
+
+            return results;
+        }
+
+
+        //Manager's Function 
         public async Task DeleteManager(string id)
         {
             var manager = await GetManagerById(id);
@@ -64,7 +129,26 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                 await Update(manager);
             }
         }
+        public async Task<ManagerEntity> GetManagerById(string id)
+        {
+            try
+            {
+                var query = _container.GetItemLinqQueryable<ManagerEntity>(true)
+                                      .Where(q => q.Id == id && q.Active && !q.Archived)
+                                      .FirstOrDefault();
 
+
+
+                return query;
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+        }
+
+
+        //Security User's Function 
         public async Task DeleteSecurity(string id)
         {
             var security = await GetSecurityById(id);
@@ -75,37 +159,6 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                 await Update(security);
             }
         }
-
-        public async Task DeleteOffice(string id)
-        {
-            var office = await GetOfficeById(id);
-            if (office != null)
-            {
-                office.Active = false;
-                office.Archived = true;
-                await Update(office);
-            }
-        }
-
-        public async Task<OfficeEntity> GetOfficeUserByEmail(string email)
-        {
-            var query = _container.GetItemLinqQueryable<OfficeEntity>(true)
-                                  .Where(q => q.Email == email && q.Active && !q.Archived)
-                                  .ToFeedIterator();
-
-            while (query.HasMoreResults)
-            {
-                var resultSet = await query.ReadNextAsync();
-                var officeUser = resultSet.FirstOrDefault();
-                if (officeUser != null)
-                {
-                    return officeUser;
-                }
-            }
-
-            return null;
-        }
-
         public async Task<SecurityEntity> GetSecurityUserByEmail(string email)
         {
             var query = _container.GetItemLinqQueryable<SecurityEntity>(true)
@@ -124,37 +177,6 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
 
             return null;
         }
-        public async Task<VisitorEntity> GetVisitorByEmail(string email)
-        {
-            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
-                                  .Where(q => q.Email == email && q.Active && !q.Archived)
-                                  .FirstOrDefault();
-
-            return query;
-        }
-
-        public Task<T> GetById<T>(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public async Task<VisitorEntity> GetVisitorById(string id)
-        {
-            try
-            {
-                var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
-                                      .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .FirstOrDefault();
-
-                return query;
-            }
-            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return null;
-            }
-        }
-
         public async Task<SecurityEntity> GetSecurityById(string id)
         {
             try
@@ -163,7 +185,7 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                                       .Where(q => q.Id == id && q.Active && !q.Archived)
                                       .FirstOrDefault();
 
-                
+
 
                 return query;
             }
@@ -172,24 +194,37 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
                 return null;
             }
         }
-        public async Task<ManagerEntity> GetManagerById(string id)
+
+
+        //Office User's Function 
+        public async Task DeleteOffice(string id)
         {
-            try
+            var office = await GetOfficeById(id);
+            if (office != null)
             {
-                var query = _container.GetItemLinqQueryable<ManagerEntity>(true)
-                                      .Where(q => q.Id == id && q.Active && !q.Archived)
-                                      .FirstOrDefault();
-
-           
-
-                return query;
-            }
-            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return null;
+                office.Active = false;
+                office.Archived = true;
+                await Update(office);
             }
         }
+        public async Task<OfficeEntity> GetOfficeUserByEmail(string email)
+        {
+            var query = _container.GetItemLinqQueryable<OfficeEntity>(true)
+                                  .Where(q => q.Email == email && q.Active && !q.Archived)
+                                  .ToFeedIterator();
 
+            while (query.HasMoreResults)
+            {
+                var resultSet = await query.ReadNextAsync();
+                var officeUser = resultSet.FirstOrDefault();
+                if (officeUser != null)
+                {
+                    return officeUser;
+                }
+            }
+
+            return null;
+        }
         public async Task<OfficeEntity> GetOfficeById(string id)
         {
             try
@@ -208,23 +243,6 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             }
         }
 
-        public async Task<List<VisitorEntity>> GetVisitorByStatus(bool status)
-        {
-            var query = _container.GetItemLinqQueryable<VisitorEntity>(true)
-                                  .Where(v => v.PassStatus == status && v.Active && !v.Archived)
-                                  .AsQueryable();
-
-            var iterator = query.ToFeedIterator();
-            var results = new List<VisitorEntity>();
-
-            while (iterator.HasMoreResults)
-            {
-                var response = await iterator.ReadNextAsync();
-                results.AddRange(response);
-            }
-
-            return results;
-        }
-
+        
     }
 }
