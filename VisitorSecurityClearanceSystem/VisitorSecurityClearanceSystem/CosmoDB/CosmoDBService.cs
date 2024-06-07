@@ -29,10 +29,7 @@ namespace VisitorSecurityClearanceSystem.CosmoDB
             var response = await _container.UpsertItemAsync(data);
             return response.Resource;
         }
-        public Task<T> GetById<T>(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
         public async Task<IEnumerable<T>> GetAll<T>()
         {
             var query = _container.GetItemQueryIterator<T>();
