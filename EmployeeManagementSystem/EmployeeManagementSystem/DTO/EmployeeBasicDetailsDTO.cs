@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EmployeeManagementSystem.Entities;
+using Newtonsoft.Json;
 
 namespace EmployeeManagementSystem.DTO
 {

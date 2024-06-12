@@ -1,5 +1,7 @@
-﻿using EmployeeManagementSystem.CosmoDB;
+﻿using AutoMapper;
+using EmployeeManagementSystem.CosmoDB;
 using EmployeeManagementSystem.DTO;
+using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
 
 namespace EmployeeManagementSystem.Services
@@ -7,79 +9,52 @@ namespace EmployeeManagementSystem.Services
     public class EmployeeAdditionalDetailsService: IEmployeeAdditionalDetailsService
     {
         private readonly ICosmoDBService _cosmoDBService;
+        private readonly IMapper _autoMapper;
 
-        public EmployeeAdditionalDetailsService(ICosmoDBService cosmoDBService)
+        public EmployeeAdditionalDetailsService(ICosmoDBService cosmoDBService, IMapper mapper)
         {
             _cosmoDBService = cosmoDBService;
+            _autoMapper = mapper;
         }
 
         public async Task<EmployeeAdditionalDetailsDTO> AddEmployeeAdditionalDetails(EmployeeAdditionalDetailsDTO employeeAdditionalDetails)
         {
-            var entity = MapDTOToEntity(employeeAdditionalDetails);
-            entity.Intialize(true, "employeeAdditionalDetails", "System", "System");
+            var entity = _autoMapper.Map<EmployeeBasicDetailsEntity>(employeeAdditionalDetails);
+            entity.Intialize(true, "employeeAdditionalDetails", "Prerit", "Prerit");
             var response = await _cosmoDBService.Add(entity);
-            return MapEntityToDTO(response);
+            return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(response);
         }
 
         public async Task<EmployeeAdditionalDetailsDTO> GetEmployeeAdditionalDetailsById(string id)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeAdditionalDetailsDTO>(id);
-            return MapEntityToDTO(entity);
+            var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
+            return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(entity);
         }
-
         public async Task<EmployeeAdditionalDetailsDTO> UpdateEmployeeAdditionalDetails(string id, EmployeeAdditionalDetailsDTO employeeAdditionalDetails)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeAdditionalDetailsDTO>(id);
+            var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
             if (entity == null) throw new Exception("Employee not found");
 
-            // Update fields
-            entity.EmployeeBasicDetailsUId = employeeAdditionalDetails.EmployeeBasicDetailsUId;
-            entity.AlternateEmail = employeeAdditionalDetails.AlternateEmail;
-            entity.AlternateMobile = employeeAdditionalDetails.AlternateMobile;
-            entity.WorkInformation = employeeAdditionalDetails.WorkInformation;
-            entity.PersonalDetails = employeeAdditionalDetails.PersonalDetails;
-            entity.IdentityInformation = employeeAdditionalDetails.IdentityInformation;
+            _autoMapper.Map(employeeAdditionalDetails, entity);
+            entity.Intialize(false, "employeeBasicDetails", "System", "System");
 
-            entity.Intialize(false, "employeeAdditionalDetails", "System", "System");
+            var response = await _cosmoDBService.Update(id, entity);
+            return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(response);
 
-            var response = await _cosmoDBService.Update(entity, id);
-            return MapEntityToDTO(response);
         }
 
         public async Task DeleteEmployeeAdditionalDetails(string id)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeAdditionalDetailsDTO>(id);
+            var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
             if (entity == null) throw new Exception("Employee not found");
 
-            await _cosmoDBService.Delete<EmployeeAdditionalDetailsDTO>(id);
+            await _cosmoDBService.DeleteAdditionalDetails(id);
         }
 
-        private EmployeeAdditionalDetailsDTO MapDTOToEntity(EmployeeAdditionalDetailsDTO dto)
+        public async Task<IEnumerable<EmployeeAdditionalDetailsDTO>> GetAllEmployeeAdditionalDetails()
         {
-            return new EmployeeAdditionalDetailsDTO
-            {
-                Id = dto.Id,
-                EmployeeBasicDetailsUId = dto.EmployeeBasicDetailsUId,
-                AlternateEmail = dto.AlternateEmail,
-                AlternateMobile = dto.AlternateMobile,
-                WorkInformation = dto.WorkInformation,
-                PersonalDetails = dto.PersonalDetails,
-                IdentityInformation = dto.IdentityInformation
-            };
-        }
-
-        private EmployeeAdditionalDetailsDTO MapEntityToDTO(EmployeeAdditionalDetailsDTO entity)
-        {
-            return new EmployeeAdditionalDetailsDTO
-            {
-                Id = entity.Id,
-                EmployeeBasicDetailsUId = entity.EmployeeBasicDetailsUId,
-                AlternateEmail = entity.AlternateEmail,
-                AlternateMobile = entity.AlternateMobile,
-                WorkInformation = entity.WorkInformation,
-                PersonalDetails = entity.PersonalDetails,
-                IdentityInformation = entity.IdentityInformation
-            };
-        }
+            var entities = await _cosmoDBService.GetAll<EmployeeAdditionalDetailsEntity>();
+            return _autoMapper.Map<IEnumerable<EmployeeAdditionalDetailsDTO>>(entities);
+        }        
     }
 }

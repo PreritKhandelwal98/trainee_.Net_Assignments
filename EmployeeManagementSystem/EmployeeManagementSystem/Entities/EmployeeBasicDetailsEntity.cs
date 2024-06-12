@@ -6,7 +6,7 @@ namespace EmployeeManagementSystem.Entities
 {
     public class EmployeeBasicDetailsEntity:BaseEntity
     {
-        [JsonProperty(PropertyName = "aalutory", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "salutory", NullValueHandling = NullValueHandling.Ignore)]
         public string Salutory { get; set; }
 
         [JsonProperty(PropertyName = "firstName", NullValueHandling = NullValueHandling.Ignore)]
@@ -21,27 +21,27 @@ namespace EmployeeManagementSystem.Entities
         [JsonProperty(PropertyName = "nickName", NullValueHandling = NullValueHandling.Ignore)]
         public string NickName { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "email", NullValueHandling = NullValueHandling.Ignore)]
         public string Email { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "mobile", NullValueHandling = NullValueHandling.Ignore)]
 
         public string Mobile { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "employeeID", NullValueHandling = NullValueHandling.Ignore)]
 
         public string EmployeeID { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "role", NullValueHandling = NullValueHandling.Ignore)]
         public string Role { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "reportingManagerUId", NullValueHandling = NullValueHandling.Ignore)]
         public string ReportingManagerUId { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "reportingManagerName", NullValueHandling = NullValueHandling.Ignore)]
         public string ReportingManagerName { get; set; }
 
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "address", NullValueHandling = NullValueHandling.Ignore)]
         public Address Address { get; set; }
     }
 }

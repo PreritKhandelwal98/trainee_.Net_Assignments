@@ -3,13 +3,16 @@ using EmployeeManagementSystem.CosmoDB;
 using EmployeeManagementSystem.DTO;
 using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace EmployeeManagementSystem.Services
 {
-    public class EmployeeBasicDetailsService: IEmployeeBasicDetailsService
+    public class EmployeeBasicDetailsService : IEmployeeBasicDetailsService
     {
         private readonly ICosmoDBService _cosmoDBService;
         private readonly IMapper _autoMapper;
+
         public EmployeeBasicDetailsService(ICosmoDBService cosmoDBService, IMapper mapper)
         {
             _cosmoDBService = cosmoDBService;
@@ -24,82 +27,37 @@ namespace EmployeeManagementSystem.Services
             return _autoMapper.Map<EmployeeBasicDetailsDTO>(response);
         }
 
+        public async Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployeeBasicDetails()
+        {
+            var entities = await _cosmoDBService.GetAll<EmployeeBasicDetailsEntity>();
+            return _autoMapper.Map<IEnumerable<EmployeeBasicDetailsDTO>>(entities);
+        }
+
         public async Task<EmployeeBasicDetailsDTO> GetEmployeeBasicDetailsById(string id)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeBasicDetailsDTO>(id);
-            return MapEntityToDTO(entity);
+            var entity = await _cosmoDBService.GetEmployeeBasicDetailsById(id);
+            return _autoMapper.Map<EmployeeBasicDetailsDTO>(entity);
         }
 
         public async Task<EmployeeBasicDetailsDTO> UpdateEmployeeBasicDetails(string id, EmployeeBasicDetailsDTO employeeBasicDetails)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeBasicDetailsDTO>(id);
+            var entity = await _cosmoDBService.GetEmployeeBasicDetailsById(id);
             if (entity == null) throw new Exception("Employee not found");
 
-            // Update fields
-            entity.Salutory = employeeBasicDetails.Salutory;
-            entity.FirstName = employeeBasicDetails.FirstName;
-            entity.MiddleName = employeeBasicDetails.MiddleName;
-            entity.LastName = employeeBasicDetails.LastName;
-            entity.NickName = employeeBasicDetails.NickName;
-            entity.Email = employeeBasicDetails.Email;
-            entity.Mobile = employeeBasicDetails.Mobile;
-            entity.EmployeeID = employeeBasicDetails.EmployeeID;
-            entity.Role = employeeBasicDetails.Role;
-            entity.ReportingManagerUId = employeeBasicDetails.ReportingManagerUId;
-            entity.ReportingManagerName = employeeBasicDetails.ReportingManagerName;
-            entity.Address = employeeBasicDetails.Address;
-
+            _autoMapper.Map(employeeBasicDetails, entity);
             entity.Intialize(false, "employeeBasicDetails", "System", "System");
 
-            var response = await _cosmoDBService.Update(entity, id);
-            return MapEntityToDTO(response);
+            var response = await _cosmoDBService.Update(id, entity);
+            return _autoMapper.Map<EmployeeBasicDetailsDTO>(response);
         }
 
         public async Task DeleteEmployeeBasicDetails(string id)
         {
-            var entity = await _cosmoDBService.GetById<EmployeeBasicDetails>(id);
+            var entity = await _cosmoDBService.GetEmployeeBasicDetailsById(id);
             if (entity == null) throw new Exception("Employee not found");
 
-            await _cosmoDBService.Delete<EmployeeBasicDetails>(id);
+            await _cosmoDBService.DeleteBasicDetails(id);
         }
+    }
 
-        private EmployeeBasicDetails MapDTOToEntity(EmployeeBasicDetailsDTO dto)
-        {
-            return new EmployeeBasicDetails
-            {
-                Id = dto.Id,
-                Salutory = dto.Salutory,
-                FirstName = dto.FirstName,
-                MiddleName = dto.MiddleName,
-                LastName = dto.LastName,
-                NickName = dto.NickName,
-                Email = dto.Email,
-                Mobile = dto.Mobile,
-                EmployeeID = dto.EmployeeID,
-                Role = dto.Role,
-                ReportingManagerUId = dto.ReportingManagerUId,
-                ReportingManagerName = dto.ReportingManagerName,
-                Address = dto.Address
-            };
-        }
-
-        private EmployeeBasicDetailsDTO MapEntityToDTO(EmployeeBasicDetails entity)
-        {
-            return new EmployeeBasicDetailsDTO
-            {
-                Id = entity.Id,
-                Salutory = entity.Salutory,
-                FirstName = entity.FirstName,
-                MiddleName = entity.MiddleName,
-                LastName = entity.LastName,
-                NickName = entity.NickName,
-                Email = entity.Email,
-                Mobile = entity.Mobile,
-                EmployeeID = entity.EmployeeID,
-                Role = entity.Role,
-                ReportingManagerUId = entity.ReportingManagerUId,
-                ReportingManagerName = entity.ReportingManagerName,
-                Address = entity.Address
-            };
-        }
 }
