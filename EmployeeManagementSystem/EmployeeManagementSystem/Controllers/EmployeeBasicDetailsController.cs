@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.DTO;
+using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,6 +55,13 @@ namespace EmployeeManagementSystem.Controllers
         {
             await _basicDetailService.DeleteEmployeeBasicDetails(id);
             return NoContent();
+        }
+
+        [HttpPost]
+        public async Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria)
+        {
+            var response = await _basicDetailService.GetAllEmployeesByPagination(employeeFilterCriteria);
+            return response;
         }
     }
 }

@@ -58,10 +58,10 @@ namespace EmployeeManagementSystem.Controllers
                         var address = new Address
                         {
                             HouseOrBuildingNumber = houseOrBuildingNumber,
-                            StreetName = GetStringFromCell(worksheet, row, 11), // Assuming column 11 is Street
-                            City = GetStringFromCell(worksheet, row, 12),   // Assuming column 12 is City
-                            State = GetStringFromCell(worksheet, row, 13),  // Assuming column 13 is State
-                            PostalCodes = GetStringFromCell(worksheet, row, 14) // Assuming column 14 is ZipCode
+                            StreetName = GetStringFromCell(worksheet, row, 11), 
+                            City = GetStringFromCell(worksheet, row, 12),   
+                            State = GetStringFromCell(worksheet, row, 13),  
+                            PostalCodes = GetStringFromCell(worksheet, row, 14) 
                         };
 
                         var employee = new EmployeeBasicDetailsDTO
@@ -75,9 +75,9 @@ namespace EmployeeManagementSystem.Controllers
                             Email = GetStringFromCell(worksheet, row, 8),
                             Mobile = GetStringFromCell(worksheet, row, 9),
                             Address = address,
-                            Role = GetStringFromCell(worksheet, row, 15), // Assuming column 15 is Role
-                            ReportingManagerUId = GetStringFromCell(worksheet, row, 16), // Assuming column 16 is ReportingManagerUId
-                            ReportingManagerName = GetStringFromCell(worksheet, row, 17), // Assuming column 17 is ReportingManagerName
+                            Role = GetStringFromCell(worksheet, row, 15), 
+                            ReportingManagerUId = GetStringFromCell(worksheet, row, 16), 
+                            ReportingManagerName = GetStringFromCell(worksheet, row, 17), 
                         };
 
                         // Call the service method to add employee basic details

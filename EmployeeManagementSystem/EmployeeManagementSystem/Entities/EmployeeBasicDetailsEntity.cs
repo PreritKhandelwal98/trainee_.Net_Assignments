@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.Common;
+using EmployeeManagementSystem.DTO;
 using Newtonsoft.Json;
 using System.Net;
 
@@ -43,5 +44,26 @@ namespace EmployeeManagementSystem.Entities
 
         [JsonProperty(PropertyName = "address", NullValueHandling = NullValueHandling.Ignore)]
         public Address Address { get; set; }
+    }
+    public class EmployeeFilterCriteria
+    {
+        public EmployeeFilterCriteria()
+        {
+            Filters = new List<FilterCriteria>();
+            Employees = new List<EmployeeBasicDetailsDTO>();
+        }
+        public int page { get; set; }
+        public int pageSize { get; set; }
+        public int totalCount { get; set; }
+        public List<FilterCriteria> Filters { get; set; }
+        public List<EmployeeBasicDetailsDTO> Employees { get; set; }
+    }
+
+    public class FilterCriteria
+    {
+
+        public string fieldName { get; set; }
+        public List<string> fieldValue { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.DTO;
+using EmployeeManagementSystem.Entities;
 
 namespace EmployeeManagementSystem.Interface
 {
@@ -9,5 +10,6 @@ namespace EmployeeManagementSystem.Interface
         Task<EmployeeBasicDetailsDTO> GetEmployeeBasicDetailsById(string id);
         Task<EmployeeBasicDetailsDTO> UpdateEmployeeBasicDetails(string id, EmployeeBasicDetailsDTO employeeBasicDetails);
         Task DeleteEmployeeBasicDetails(string id);
+        Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria);
     }
 }
