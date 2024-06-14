@@ -1,7 +1,96 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\services\\employeebasicdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\employeebasicdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\services\\employeeadditionaldetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\employeeadditionaldetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\controllers\\employeeadditionaldetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeeadditionaldetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\cosmodb\\cosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\cosmodb\\cosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\employeeadditionaldetailsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\employeeadditionaldetailsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\dto\\employeeadditionaldetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\dto\\employeeadditionaldetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\controllers\\employeebasicdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeebasicdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\employeebasicdetailsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\employeebasicdetailsentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\dto\\employeebasicdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\dto\\employeebasicdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\common\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\common\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\controllers\\importandexportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\importandexportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\personaldetails_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\personaldetails_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\identityinfo_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\identityinfo_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\workinfo_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\workinfo_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\interface\\iemployeebasicdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\interface\\iemployeebasicdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\interface\\iemployeeadditionaldetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\interface\\iemployeeadditionaldetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\cosmodb\\icosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\cosmodb\\icosmodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\common\\credentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\common\\credentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|e:\\job\\centralogic\\trainee_.net_assignments\\employeemanagementsystem\\employeemanagementsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2D112C31-E572-4B8F-BAA9-E825B820C8DD}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +98,284 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeAdditionalDetailsService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeAdditionalDetailsService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\EmployeeAdditionalDetailsService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeAdditionalDetailsService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeAdditionalDetailsService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAtwCEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:15:29.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeAdditionalDetailsController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeAdditionalDetailsController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeAdditionalDetailsController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeAdditionalDetailsController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeAdditionalDetailsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:05:59.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeBasicDetailsService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAuwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:15:14.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CosmoDBService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\CosmoDB\\CosmoDBService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\CosmoDB\\CosmoDBService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\CosmoDB\\CosmoDBService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\CosmoDB\\CosmoDBService.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGMAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:33:45.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeeAdditionalDetailsDTO.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\DTO\\EmployeeAdditionalDetailsDTO.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\DTO\\EmployeeAdditionalDetailsDTO.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\DTO\\EmployeeAdditionalDetailsDTO.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\DTO\\EmployeeAdditionalDetailsDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:37:18.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeBasicDetailsController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeBasicDetailsController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeBasicDetailsController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeBasicDetailsController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeBasicDetailsController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:05:32.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeAdditionalDetailsEntity.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\EmployeeAdditionalDetailsEntity.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\EmployeeAdditionalDetailsEntity.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\EmployeeAdditionalDetailsEntity.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\EmployeeAdditionalDetailsEntity.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:35:54.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeBasicDetailsEntity.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\EmployeeBasicDetailsEntity.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\EmployeeBasicDetailsEntity.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\EmployeeBasicDetailsEntity.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\EmployeeBasicDetailsEntity.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA+wCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:33:46.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeBasicDetailsDTO.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\DTO\\EmployeeBasicDetailsDTO.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\DTO\\EmployeeBasicDetailsDTO.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\DTO\\EmployeeBasicDetailsDTO.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\DTO\\EmployeeBasicDetailsDTO.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:32:32.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T09:56:10.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ImportAndExportController.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\ImportAndExportController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\ImportAndExportController.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\ImportAndExportController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\ImportAndExportController.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAkwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:21:05.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Common\\AutoMapperProfile.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\AutoMapperProfile.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Common\\AutoMapperProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T12:36:52.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WorkInfo_.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\WorkInfo_.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\WorkInfo_.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\WorkInfo_.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\WorkInfo_.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:26:17.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PersonalDetails_.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\PersonalDetails_.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\PersonalDetails_.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\PersonalDetails_.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\PersonalDetails_.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:50:49.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IdentityInfo_.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\IdentityInfo_.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\IdentityInfo_.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\IdentityInfo_.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\IdentityInfo_.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:38:24.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEmployeeBasicDetailsService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Interface\\IEmployeeBasicDetailsService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interface\\IEmployeeBasicDetailsService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Interface\\IEmployeeBasicDetailsService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Interface\\IEmployeeBasicDetailsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:10:14.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IEmployeeAdditionalDetailsService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Interface\\IEmployeeAdditionalDetailsService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Interface\\IEmployeeAdditionalDetailsService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Interface\\IEmployeeAdditionalDetailsService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Interface\\IEmployeeAdditionalDetailsService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T12:32:14.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Address.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\Address.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Entities\\Address.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Entities\\Address.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Entities\\Address.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:47:26.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ICosmoDBService.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\CosmoDB\\ICosmoDBService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\CosmoDB\\ICosmoDBService.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\CosmoDB\\ICosmoDBService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\CosmoDB\\ICosmoDBService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:32:02.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Credentials.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\Credentials.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Common\\Credentials.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\Credentials.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Common\\Credentials.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:04:54.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Common\\BaseEntity.cs",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Common\\BaseEntity.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA9wEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:45:46.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "RelativeToolTip": "EmployeeManagementSystem\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-12T10:19:03.08Z"
             }
           ]
         }

@@ -1,8 +1,8 @@
-﻿using EmployeeManagementSystem.DTO;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml.Style;
 using OfficeOpenXml;
 using System.Drawing;
+using EmployeeManagementSystem.Interface;
 
 namespace EmployeeManagementSystem.Controllers
 {
@@ -10,13 +10,22 @@ namespace EmployeeManagementSystem.Controllers
     [ApiController]
     public class ImportAndExportController : Controller
     {
+        private readonly IEmployeeBasicDetailsService _basicDetailsService;
+        private readonly IEmployeeAdditionalDetailsService _additionalDetailsService;
+
+        public ImportAndExportController(IEmployeeBasicDetailsService basicDetailsService, IEmployeeAdditionalDetailsService additionalDetailsService)
+        {
+            _basicDetailsService = basicDetailsService;
+            _additionalDetailsService = additionalDetailsService;
+        }
+
         private string GetStringFromCell(ExcelWorksheet worksheet, int row, int column)
         {
             var cellValue = worksheet.Cells[row, column].Value;
             return cellValue?.ToString()?.Trim();
         }
 
-        [HttpPost("ImportExcel")]
+        /*[HttpPost("ImportExcel")]
         public async Task<IActionResult> ImportExcel(IFormFile formFile)
         {
             if (formFile == null || formFile.Length == 0)
@@ -24,7 +33,7 @@ namespace EmployeeManagementSystem.Controllers
                 return BadRequest("File is empty or null");
             }
 
-            var visitors = new List<EmployeeAdditionalDetailsDTO>();
+            var visitors = new List<VisitorDTO>();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
             using (var stream = new MemoryStream())
@@ -37,7 +46,7 @@ namespace EmployeeManagementSystem.Controllers
 
                     for (int row = 2; row <= rowCount; row++)
                     {
-                        var student = new EmployeeAdditionalDetailsDTO
+                        var student = new VisitorDTO
                         {
                             Id = GetStringFromCell(worksheet, row, 2),
                             Name = GetStringFromCell(worksheet, row, 3),
@@ -59,75 +68,77 @@ namespace EmployeeManagementSystem.Controllers
                 }
             }
             return Ok(visitors);
-        }
+        }*/
 
         [HttpGet("ExportInExcel")]
         public async Task<IActionResult> Export()
         {
-            var visitors = await _additionalDetailService.GetAllVisitors();
+            var basicDetails = await _basicDetailsService.GetAllEmployeeBasicDetails();
+            var additionalDetails = await _additionalDetailsService.GetAllEmployeeAdditionalDetails();
 
-            // Ensure visitors is not null
-            if (visitors == null)
+            // Merge data based on EmployeeID
+            var dataToExport = from basic in basicDetails
+                               join additional in additionalDetails on basic.EmployeeID equals additional.EmployeeBasicDetailsUId
+                               select new
+                               {
+                                   SrNo = basic.EmployeeID,
+                                   FirstName = basic.FirstName,
+                                   LastName = basic.LastName,
+                                   Email = basic.Email,
+                                   Phone = basic.Mobile,
+                                   ReportingManagerName = basic.ReportingManagerName,
+                                   DateOfBirth = additional.PersonalDetails.DateOfBirth,
+                                   DateOfJoining = additional.WorkInformation.DateOfJoining
+                               };
+
+            if (!dataToExport.Any())
             {
-                return NotFound("No Visitor found to export.");
-            }
-
-            var visitorList = visitors.ToList();
-
-            // Ensure visitorList is not empty
-            if (!visitorList.Any())
-            {
-                return NotFound("No students found to export.");
+                return NotFound("No data found to export.");
             }
 
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
             using (var package = new ExcelPackage())
             {
-                var worksheet = package.Workbook.Worksheets.Add("Students");
+                var worksheet = package.Workbook.Worksheets.Add("Employees");
 
                 // Add Header
-                worksheet.Cells[1, 1].Value = "Id";
-                worksheet.Cells[1, 2].Value = "Name";
-                worksheet.Cells[1, 3].Value = "Email";
-                worksheet.Cells[1, 4].Value = "Phone";
-                worksheet.Cells[1, 5].Value = "Address";
-                worksheet.Cells[1, 6].Value = "CompanyName";
-                worksheet.Cells[1, 7].Value = "Purpose";
-                worksheet.Cells[1, 8].Value = "EntryTime";
-                worksheet.Cells[1, 9].Value = "ExitTime";
-                worksheet.Cells[1, 10].Value = "PassStatus";
-                worksheet.Cells[1, 11].Value = "Role";
+                worksheet.Cells[1, 1].Value = "Sr.No";
+                worksheet.Cells[1, 2].Value = "First Name";
+                worksheet.Cells[1, 3].Value = "Last Name";
+                worksheet.Cells[1, 4].Value = "Email";
+                worksheet.Cells[1, 5].Value = "Phone No";
+                worksheet.Cells[1, 6].Value = "Reporting Manager Name";
+                worksheet.Cells[1, 7].Value = "Date Of Birth";
+                worksheet.Cells[1, 8].Value = "Date of Joining";
 
                 // Set Header Style
-                using (var range = worksheet.Cells[1, 1, 1, 11])
+                using (var range = worksheet.Cells[1, 1, 1, 8])
                 {
                     range.Style.Font.Bold = true;
                     range.Style.Fill.PatternType = ExcelFillStyle.Solid;
                     range.Style.Fill.BackgroundColor.SetColor(Color.LightGreen);
                 }
 
-                for (int i = 0; i < visitorList.Count; i++)
+                var rowIndex = 2;
+                foreach (var data in dataToExport)
                 {
-                    var student = visitorList[i];
-                    worksheet.Cells[i + 2, 1].Value = student.Id;
-                    worksheet.Cells[i + 2, 2].Value = student.Name;
-                    worksheet.Cells[i + 2, 3].Value = student.Email;
-                    worksheet.Cells[i + 2, 4].Value = student.Phone;
-                    worksheet.Cells[i + 2, 5].Value = student.Address;
-                    worksheet.Cells[i + 2, 6].Value = student.CompanyName;
-                    worksheet.Cells[i + 2, 7].Value = student.Purpose;
-                    worksheet.Cells[i + 2, 8].Value = student.EntryTime;
-                    worksheet.Cells[i + 2, 9].Value = student.ExitTime;
-                    worksheet.Cells[i + 2, 10].Value = student.PassStatus;
-                    worksheet.Cells[i + 2, 11].Value = student.Role;
+                    worksheet.Cells[rowIndex, 1].Value = data.SrNo;
+                    worksheet.Cells[rowIndex, 2].Value = data.FirstName;
+                    worksheet.Cells[rowIndex, 3].Value = data.LastName;
+                    worksheet.Cells[rowIndex, 4].Value = data.Email;
+                    worksheet.Cells[rowIndex, 5].Value = data.Phone;
+                    worksheet.Cells[rowIndex, 6].Value = data.ReportingManagerName;
+                    worksheet.Cells[rowIndex, 7].Value = data.DateOfBirth.ToShortDateString();
+                    worksheet.Cells[rowIndex, 8].Value = data.DateOfJoining.ToShortDateString();
+                    rowIndex++;
                 }
 
                 var stream = new MemoryStream();
                 package.SaveAs(stream);
                 stream.Position = 0;
 
-                var fileName = "Visitors.xlsx";
+                var fileName = "Employees.xlsx";
                 return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
             }
         }

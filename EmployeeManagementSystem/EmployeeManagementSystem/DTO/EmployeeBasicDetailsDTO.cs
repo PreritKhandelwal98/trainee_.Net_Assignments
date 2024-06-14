@@ -5,6 +5,9 @@ namespace EmployeeManagementSystem.DTO
 {
     public class EmployeeBasicDetailsDTO
     {
+        [JsonProperty("employeeID")]
+        public string EmployeeID { get; set; }
+
         [JsonProperty("salutory")]
         public string Salutory { get; set; }
 
@@ -25,9 +28,6 @@ namespace EmployeeManagementSystem.DTO
 
         [JsonProperty("mobile")]
         public string Mobile { get; set; }
-
-        [JsonProperty("employeeID")]
-        public string EmployeeID { get; set; }
 
         [JsonProperty("role")]
         public string Role { get; set; }

@@ -22,14 +22,14 @@ namespace EmployeeManagementSystem.Services
         public async Task<EmployeeBasicDetailsDTO> AddEmployeeBasicDetails(EmployeeBasicDetailsDTO employeeBasicDetails)
         {
             var entity = _autoMapper.Map<EmployeeBasicDetailsEntity>(employeeBasicDetails);
-            entity.Intialize(true, "employeeBasicDetails", "System", "System");
+            entity.Intialize(true, "employeeBasicDetails", "Prerit", "Prerit");
             var response = await _cosmoDBService.Add(entity);
             return _autoMapper.Map<EmployeeBasicDetailsDTO>(response);
         }
 
         public async Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployeeBasicDetails()
         {
-            var entities = await _cosmoDBService.GetAll<EmployeeBasicDetailsEntity>();
+            var entities = await _cosmoDBService.GetAllBasicDetails();
             return _autoMapper.Map<IEnumerable<EmployeeBasicDetailsDTO>>(entities);
         }
 

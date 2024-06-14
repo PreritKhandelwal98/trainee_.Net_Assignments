@@ -1,4 +1,4 @@
-﻿namespace EmployeeManagementSystem.DTO
+﻿namespace EmployeeManagementSystem.Entities
 {
     public class IdentityInfo_
     {

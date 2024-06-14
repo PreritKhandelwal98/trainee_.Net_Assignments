@@ -3,26 +3,23 @@ using EmployeeManagementSystem.CosmoDB;
 using EmployeeManagementSystem.DTO;
 using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace EmployeeManagementSystem.Services
 {
-    public class EmployeeAdditionalDetailsService: IEmployeeAdditionalDetailsService
+    public class EmployeeAdditionalDetailsService : IEmployeeAdditionalDetailsService
     {
         private readonly ICosmoDBService _cosmoDBService;
         private readonly IMapper _autoMapper;
+        private readonly IEmployeeBasicDetailsService _basicDetailsService;
 
-        public EmployeeAdditionalDetailsService(ICosmoDBService cosmoDBService, IMapper mapper)
+        public EmployeeAdditionalDetailsService(ICosmoDBService cosmoDBService, IMapper mapper, IEmployeeBasicDetailsService basicDetailsService)
         {
             _cosmoDBService = cosmoDBService;
             _autoMapper = mapper;
-        }
-
-        public async Task<EmployeeAdditionalDetailsDTO> AddEmployeeAdditionalDetails(EmployeeAdditionalDetailsDTO employeeAdditionalDetails)
-        {
-            var entity = _autoMapper.Map<EmployeeBasicDetailsEntity>(employeeAdditionalDetails);
-            entity.Intialize(true, "employeeAdditionalDetails", "Prerit", "Prerit");
-            var response = await _cosmoDBService.Add(entity);
-            return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(response);
+            _basicDetailsService = basicDetailsService;
         }
 
         public async Task<EmployeeAdditionalDetailsDTO> GetEmployeeAdditionalDetailsById(string id)
@@ -30,17 +27,62 @@ namespace EmployeeManagementSystem.Services
             var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
             return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(entity);
         }
-        public async Task<EmployeeAdditionalDetailsDTO> UpdateEmployeeAdditionalDetails(string id, EmployeeAdditionalDetailsDTO employeeAdditionalDetails)
+
+        public async Task<EmployeeAdditionalDetailsDTO> AddEmployeeAdditionalDetails(EmployeeAdditionalDetailsDTO additionalDetailsDTO)
+        {
+            // Fetch the existing basic details using the provided EmployeeBasicDetailsUId
+            var basicDetails = await _basicDetailsService.GetEmployeeBasicDetailsById(additionalDetailsDTO.EmployeeBasicDetailsUId);
+
+            // Check if the basic details exist
+            if (basicDetails == null)
+            {
+                throw new Exception("Basic details not found for the provided ID");
+            }
+
+            // Fetch the existing additional details (if any)
+            var existingAdditionalDetails = await _cosmoDBService.GetEmployeeAdditionalDetailsById(additionalDetailsDTO.EmployeeBasicDetailsUId);
+
+            // If additional details exist, update them
+            if (existingAdditionalDetails != null)
+            {
+                // Map the new additional details onto the existing entity
+                _autoMapper.Map(additionalDetailsDTO, existingAdditionalDetails);
+
+                // Initialize the entity (optional based on your implementation)
+/*                existingAdditionalDetails.Initialize(false, "employeeAdditionalDetails", "Prerit", "Prerit");
+*/
+                // Update the existing record in the database
+                var updatedResponse = await _cosmoDBService.Update(additionalDetailsDTO.EmployeeBasicDetailsUId, existingAdditionalDetails);
+
+                // Return the updated additional details DTO
+                return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(updatedResponse);
+            }
+            else
+            {
+                // If no additional details exist, create new additional details
+                var entity = _autoMapper.Map<EmployeeAdditionalDetailsEntity>(additionalDetailsDTO);
+/*                entity.Initialize(true, "employeeAdditionalDetails", "Prerit", "Prerit");
+*/                var response = await _cosmoDBService.Add(entity);
+
+                // Return the newly added additional details DTO
+                return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(response);
+            }
+        }
+
+
+        
+
+        public async Task<EmployeeAdditionalDetailsDTO> UpdateEmployeeAdditionalDetails(string id, EmployeeAdditionalDetailsDTO additionalDetailsDTO)
         {
             var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
             if (entity == null) throw new Exception("Employee not found");
 
-            _autoMapper.Map(employeeAdditionalDetails, entity);
-            entity.Intialize(false, "employeeBasicDetails", "System", "System");
+            // Map the updated details from DTO to the existing entity
+            _autoMapper.Map(additionalDetailsDTO, entity);
+            entity.Intialize(false, "employeeAdditionalDetails", "System", "System");
 
             var response = await _cosmoDBService.Update(id, entity);
             return _autoMapper.Map<EmployeeAdditionalDetailsDTO>(response);
-
         }
 
         public async Task DeleteEmployeeAdditionalDetails(string id)
@@ -53,8 +95,8 @@ namespace EmployeeManagementSystem.Services
 
         public async Task<IEnumerable<EmployeeAdditionalDetailsDTO>> GetAllEmployeeAdditionalDetails()
         {
-            var entities = await _cosmoDBService.GetAll<EmployeeAdditionalDetailsEntity>();
+            var entities = await _cosmoDBService.GetAllAdditionalDetails();
             return _autoMapper.Map<IEnumerable<EmployeeAdditionalDetailsDTO>>(entities);
-        }        
+        }
     }
 }

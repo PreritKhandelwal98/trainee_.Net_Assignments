@@ -18,7 +18,8 @@ namespace EmployeeManagementSystem.Controllers
         [HttpPost]
         public async Task<EmployeeBasicDetailsDTO> AddBasicDetail(EmployeeBasicDetailsDTO basicDetailsDTO)
         {
-            return await _basicDetailService.AddEmployeeBasicDetails(basicDetailsDTO);
+            var createdBasicDetail = await _basicDetailService.AddEmployeeBasicDetails(basicDetailsDTO);
+            return createdBasicDetail;
         }
 
         [HttpGet]
