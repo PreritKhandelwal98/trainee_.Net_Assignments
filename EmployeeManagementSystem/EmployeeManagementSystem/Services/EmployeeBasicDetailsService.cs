@@ -64,19 +64,22 @@ namespace EmployeeManagementSystem.Services
         {
             EmployeeFilterCriteria response = new EmployeeFilterCriteria();
 
+            // Check for role filter
+            var checkFilter = employeeFilterCriteria.Filters.Any(x => x.fieldName == "role");
+            var role = "";
+            if (checkFilter)
+            {
+                role = employeeFilterCriteria.Filters.Find(a => a.fieldName == "role").fieldValue.FirstOrDefault();
+            }
+
             // Fetch all employee details
             var employees = await GetAllEmployeeBasicDetails();
 
-            // Convert to list to ensure countable collection
-            var employeeList = employees.ToList();
+            // Filter records based on role
+            var filterRecords = string.IsNullOrEmpty(role) ? employees : employees.Where(a => a.Role == role);
 
-            // Check for null or empty list
-            if (employeeList == null || !employeeList.Any())
-            {
-                response.totalCount = 0;
-                response.Employees = new List<EmployeeBasicDetailsDTO>();
-                return response;
-            }
+            // Convert to list to ensure countable collection
+            var employeeList = filterRecords.ToList();
 
             // Set total count
             response.totalCount = employeeList.Count;
@@ -93,7 +96,10 @@ namespace EmployeeManagementSystem.Services
             var skip = response.pageSize * (response.page - 1);
 
             // Paginate the list
-            response.Employees = employeeList.Skip(skip).Take(response.pageSize).ToList();
+            var pagedRecords = employeeList.Skip(skip).Take(response.pageSize).ToList();
+
+            // Add paginated records to response
+            response.Employees = pagedRecords;
 
             return response;
         }
