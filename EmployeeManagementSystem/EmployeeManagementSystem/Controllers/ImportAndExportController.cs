@@ -3,6 +3,8 @@ using OfficeOpenXml.Style;
 using OfficeOpenXml;
 using System.Drawing;
 using EmployeeManagementSystem.Interface;
+using EmployeeManagementSystem.DTO;
+using EmployeeManagementSystem.Entities;
 
 namespace EmployeeManagementSystem.Controllers
 {
@@ -25,7 +27,7 @@ namespace EmployeeManagementSystem.Controllers
             return cellValue?.ToString()?.Trim();
         }
 
-        /*[HttpPost("ImportExcel")]
+        [HttpPost("ImportExcel")]
         public async Task<IActionResult> ImportExcel(IFormFile formFile)
         {
             if (formFile == null || formFile.Length == 0)
@@ -33,7 +35,7 @@ namespace EmployeeManagementSystem.Controllers
                 return BadRequest("File is empty or null");
             }
 
-            var visitors = new List<VisitorDTO>();
+            var employees = new List<EmployeeBasicDetailsDTO>();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
             using (var stream = new MemoryStream())
@@ -46,29 +48,48 @@ namespace EmployeeManagementSystem.Controllers
 
                     for (int row = 2; row <= rowCount; row++)
                     {
-                        var student = new VisitorDTO
+                        var houseOrBuildingNumberString = GetStringFromCell(worksheet, row, 10); // Assuming column 10 is HouseOrBuildingNumber
+                        int houseOrBuildingNumber;
+                        if (!int.TryParse(houseOrBuildingNumberString, out houseOrBuildingNumber))
                         {
-                            Id = GetStringFromCell(worksheet, row, 2),
-                            Name = GetStringFromCell(worksheet, row, 3),
-                            Email = GetStringFromCell(worksheet, row, 4),
-                            Phone = GetStringFromCell(worksheet, row, 5),
-                            Address = GetStringFromCell(worksheet, row, 6),
-                            CompanyName = GetStringFromCell(worksheet, row, 7),
-                            Purpose = GetStringFromCell(worksheet, row, 8),
-                            EntryTime = Convert.ToDateTime(GetStringFromCell(worksheet, row, 9)),
-                            ExitTime = Convert.ToDateTime(GetStringFromCell(worksheet, row, 10)),
-                            PassStatus = Convert.ToBoolean(GetStringFromCell(worksheet, row, 11)),
-                            Role = GetStringFromCell(worksheet, row, 12),
+                            return BadRequest($"Invalid HouseOrBuildingNumber at row {row}");
+                        }
 
+                        var address = new Address
+                        {
+                            HouseOrBuildingNumber = houseOrBuildingNumber,
+                            StreetName = GetStringFromCell(worksheet, row, 11), // Assuming column 11 is Street
+                            City = GetStringFromCell(worksheet, row, 12),   // Assuming column 12 is City
+                            State = GetStringFromCell(worksheet, row, 13),  // Assuming column 13 is State
+                            PostalCodes = GetStringFromCell(worksheet, row, 14) // Assuming column 14 is ZipCode
                         };
-                        await AddVisitor(student); // Ensure async method is awaited
 
-                        visitors.Add(student);
+                        var employee = new EmployeeBasicDetailsDTO
+                        {
+                            EmployeeID = GetStringFromCell(worksheet, row, 2),
+                            Salutory = GetStringFromCell(worksheet, row, 3),
+                            FirstName = GetStringFromCell(worksheet, row, 4),
+                            MiddleName = GetStringFromCell(worksheet, row, 5),
+                            LastName = GetStringFromCell(worksheet, row, 6),
+                            NickName = GetStringFromCell(worksheet, row, 7),
+                            Email = GetStringFromCell(worksheet, row, 8),
+                            Mobile = GetStringFromCell(worksheet, row, 9),
+                            Address = address,
+                            Role = GetStringFromCell(worksheet, row, 15), // Assuming column 15 is Role
+                            ReportingManagerUId = GetStringFromCell(worksheet, row, 16), // Assuming column 16 is ReportingManagerUId
+                            ReportingManagerName = GetStringFromCell(worksheet, row, 17), // Assuming column 17 is ReportingManagerName
+                        };
+
+                        // Call the service method to add employee basic details
+                        var addedEmployee = await _basicDetailsService.AddEmployeeBasicDetails(employee);
+                        employees.Add(addedEmployee);
                     }
                 }
             }
-            return Ok(visitors);
-        }*/
+            return Ok(employees);
+        }
+
+
 
         [HttpGet("ExportInExcel")]
         public async Task<IActionResult> Export()
