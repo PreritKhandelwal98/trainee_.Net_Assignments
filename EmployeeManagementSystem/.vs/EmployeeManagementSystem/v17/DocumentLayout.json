@@ -114,8 +114,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Entities\\EmployeeBasicDetailsEntity.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAA4wC8AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T12:04:18.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T12:04:18.207Z"
             },
             {
               "$type": "Document",
@@ -125,7 +124,7 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
               "ToolTip": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeBasicDetailsService.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAswGkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T11:15:14.129Z",
               "EditorCaption": ""
@@ -140,8 +139,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Interface\\IEmployeeBasicDetailsService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T08:10:14.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T08:10:14.784Z"
             },
             {
               "$type": "Document",
@@ -153,8 +151,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeBasicDetailsController.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAQwEEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T11:05:32.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T11:05:32.724Z"
             },
             {
               "$type": "Document",
@@ -166,8 +163,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Entities\\EmployeeAdditionalDetailsEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:35:54.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:35:54.661Z"
             },
             {
               "$type": "Document",
@@ -179,8 +175,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\CosmoDB\\CosmoDBService.cs",
               "ViewState": "AQIAAF4AAAAAAAAAAAA+wIoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T04:33:45.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T04:33:45.251Z"
             },
             {
               "$type": "Document",
@@ -192,8 +187,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\ImportAndExportController.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAQwEQAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T07:21:05.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T07:21:05.011Z"
             },
             {
               "$type": "Document",
@@ -205,8 +199,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Entities\\Address.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:47:26.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:47:26.221Z"
             },
             {
               "$type": "Document",
@@ -218,8 +211,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeAdditionalDetailsService.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAcwE4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T11:15:29.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T11:15:29.378Z"
             },
             {
               "$type": "Document",
@@ -231,8 +223,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\DTO\\EmployeeAdditionalDetailsDTO.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:37:18.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:37:18.861Z"
             },
             {
               "$type": "Document",
@@ -244,8 +235,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeAdditionalDetailsController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAQwDQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T11:05:59.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T11:05:59.649Z"
             },
             {
               "$type": "Document",
@@ -257,8 +247,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\DTO\\EmployeeBasicDetailsDTO.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAqwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:32:32.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:32:32.573Z"
             },
             {
               "$type": "Document",
