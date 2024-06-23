@@ -2,6 +2,7 @@ using EmployeeManagementSystem.Common;
 using EmployeeManagementSystem.CosmoDB;
 using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
+using EmployeeManagementSystem.ServiceFilters;
 using EmployeeManagementSystem.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ builder.Services.AddScoped<IEmployeeAdditionalDetailsService, EmployeeAdditional
 builder.Services.AddScoped<IEmployeeBasicDetailsService, EmployeeBasicDetailsService>();
 builder.Services.AddScoped<ICosmoDBService, CosmoDBService>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+builder.Services.AddScoped<BuildEmployeeFilter>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

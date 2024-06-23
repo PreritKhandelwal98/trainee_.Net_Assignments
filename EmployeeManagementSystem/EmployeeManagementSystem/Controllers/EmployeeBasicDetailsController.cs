@@ -1,6 +1,7 @@
 ﻿using EmployeeManagementSystem.DTO;
 using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
+using EmployeeManagementSystem.ServiceFilters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagementSystem.Controllers
@@ -60,6 +61,7 @@ namespace EmployeeManagementSystem.Controllers
 
 
         [HttpPost]
+        [ServiceFilter(typeof(BuildEmployeeFilter))]
         public async Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria)
         {
             var response = await _basicDetailService.GetAllEmployeesByPagination(employeeFilterCriteria);
