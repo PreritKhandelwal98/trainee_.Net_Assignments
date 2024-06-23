@@ -57,11 +57,29 @@ namespace EmployeeManagementSystem.Controllers
             return NoContent();
         }
 
+
+
         [HttpPost]
         public async Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria)
         {
             var response = await _basicDetailService.GetAllEmployeesByPagination(employeeFilterCriteria);
             return response;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddVisitorByMakePostRequest(EmployeeBasicDetailsDTO employeee)
+        {
+            var response = await _basicDetailService.AddVisitorByMakePostRequest(employeee);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var response = await _basicDetailService.GetAllEmployees();
+            return Ok(response);
+        }
+
+
     }
 }

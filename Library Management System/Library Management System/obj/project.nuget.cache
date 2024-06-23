@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+JzcWU52MOVzpH5YfB+boW268y06aSPrh88W+FCm2yRAxDwkxmX7fQxZMp/d0Ctiopx6crgD0B9Bw8oRfwqXfg==",
+  "dgSpecHash": "0TPVB7KOoqs+Lu/eta+bPAFfpk4+ApEhgIrGgXiFB2uD6U/JfWBS7rG9qOTUtwROPBGg0eA9eCZspYtgjNxeJw==",
   "success": true,
-  "projectFilePath": "E:\\Job\\CentraLogic\\Day4(10-05-2024)\\trainee_.Net_Assignment1\\Library Management System\\Library Management System\\LibraryManagementSystem.csproj",
+  "projectFilePath": "E:\\Job\\CentraLogic\\trainee_.Net_Assignments\\Library Management System\\Library Management System\\LibraryManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.19.0\\azure.core.1.19.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.azure.cosmos\\3.41.0-preview.0\\microsoft.azure.cosmos.3.41.0-preview.0.nupkg.sha512",

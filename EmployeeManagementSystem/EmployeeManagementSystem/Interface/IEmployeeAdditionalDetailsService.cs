@@ -9,5 +9,7 @@ namespace EmployeeManagementSystem.Interface
         Task<EmployeeAdditionalDetailsDTO> UpdateEmployeeAdditionalDetails(string id, EmployeeAdditionalDetailsDTO employeeAdditionalDetails);
         Task<EmployeeAdditionalDetailsDTO> GetEmployeeAdditionalDetailsById(string id);
         Task<EmployeeAdditionalDetailsDTO> AddEmployeeAdditionalDetails(EmployeeAdditionalDetailsDTO employeeAdditionalDetails);
-    }
+
+/*        Task<AdvanceFilterCriteria> PaginationFilter(AdvanceFilterCriteria advanceFilterCriteria);
+*/    }
 }

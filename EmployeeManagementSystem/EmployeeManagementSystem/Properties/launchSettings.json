@@ -30,7 +30,8 @@
         "url": "https://localhost:8081",
         "databaseName": "Employee Management System",
         "containerName": "Employee Management System",
-        "primaryKey": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=="
+        "primaryKey": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
+        "employeeUrl": "https://localhost:7094"
       }
     },
     "IIS Express": {

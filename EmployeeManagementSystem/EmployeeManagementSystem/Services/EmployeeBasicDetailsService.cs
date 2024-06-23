@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using EmployeeManagementSystem.Common;
 using EmployeeManagementSystem.CosmoDB;
 using EmployeeManagementSystem.DTO;
 using EmployeeManagementSystem.Entities;
 using EmployeeManagementSystem.Interface;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -103,6 +105,25 @@ namespace EmployeeManagementSystem.Services
 
             return response;
         }
+
+        public async Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(EmployeeBasicDetailsDTO visitor)
+        {
+            var serialObj = JsonConvert.SerializeObject(visitor);
+            var requestObj = await HttpClientHelper.MakePostRequest(Credentials.EmployeeUrl, Credentials.AddEmployeeEndPoint, serialObj);
+            var responseObj = JsonConvert.DeserializeObject<EmployeeBasicDetailsDTO>(requestObj);
+            return responseObj;
+
+        }
+
+     
+        public async Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployees()
+        {
+            var responseString = await HttpClientHelper.MakeGetRequest(Credentials.EmployeeUrl, Credentials.GetAllEmployeesEndPoint);
+            var employees = JsonConvert.DeserializeObject<IEnumerable<EmployeeBasicDetailsDTO>>(responseString);
+            return employees;
+        }
+
+        
     }
 
 }

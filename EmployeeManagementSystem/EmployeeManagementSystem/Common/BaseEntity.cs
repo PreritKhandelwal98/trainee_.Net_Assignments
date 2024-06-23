@@ -44,8 +44,6 @@ namespace EmployeeManagementSystem.Common
             if (isNew)
             {
                 //Adding new Record
-                Id = Guid.NewGuid().ToString();
-                UId = Id;
                 UId = Id;
                 CreatedBy = createdOrUpdatedBy;
                 CreatedOn = DateTime.UtcNow;

@@ -12,5 +12,7 @@ namespace VisitorSecurityClearanceSystem.Interface
         Task<List<VisitorDTO>> GetVisitorsByStatus(bool status);
 
         Task DeleteVisitor(string id);
+        Task<VisitorDTO> AddVisitorByMakePostRequest(VisitorDTO visitor);
+        Task<IEnumerable<VisitorDTO>> GetAllEmployees();
     }
 }

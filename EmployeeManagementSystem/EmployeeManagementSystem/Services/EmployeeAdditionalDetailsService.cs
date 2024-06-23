@@ -48,9 +48,6 @@ namespace EmployeeManagementSystem.Services
 
 
 
-
-
-
         public async Task<EmployeeAdditionalDetailsDTO> UpdateEmployeeAdditionalDetails(string id, EmployeeAdditionalDetailsDTO additionalDetailsDTO)
         {
             var entity = await _cosmoDBService.GetEmployeeAdditionalDetailsById(id);
@@ -77,5 +74,7 @@ namespace EmployeeManagementSystem.Services
             var entities = await _cosmoDBService.GetAllAdditionalDetails();
             return _autoMapper.Map<IEnumerable<EmployeeAdditionalDetailsDTO>>(entities);
         }
+
+        
     }
 }

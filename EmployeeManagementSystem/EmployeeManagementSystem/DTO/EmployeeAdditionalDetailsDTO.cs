@@ -23,4 +23,24 @@ namespace EmployeeManagementSystem.DTO
         [JsonProperty("identityInformation")]
         public IdentityInfo_ IdentityInformation { get; set; }
     }
+
+    public class AdvanceFilterCriteria
+    {
+        public AdvanceFilterCriteria() {
+            Filters = new List<FIlterCriteria>();
+            EmployeeAdditionalDetails = new List<EmployeeAdditionalDetailsDTO>();
+        }
+        public int Pange { get; set; }
+        public int Count { get; set; }
+        public int PageSize { get; set; }
+
+        public List<FIlterCriteria> Filters;
+        public List<EmployeeAdditionalDetailsDTO> EmployeeAdditionalDetails { get; set; }
+    }
+
+    public class FIlterCriteria
+    {
+        public string FieldName { get; set; }
+        public List<string> FieldValue { get; set; }
+    }
 }

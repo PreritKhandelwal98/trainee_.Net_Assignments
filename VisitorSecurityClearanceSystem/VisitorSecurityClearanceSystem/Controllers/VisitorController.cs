@@ -109,7 +109,47 @@ namespace VisitorSecurityClearanceSystem.Controllers
             return Ok(visitors);
         }
 
-        [HttpGet("ExportInExcel")]
+        [HttpPost("{ImportExcel}")]
+        public async Task<IActionResult> Export(IFormFile formFile)
+        {
+            if (formFile == null || formFile.Length == 0)
+            {
+                return BadRequest("File is empty");
+            }
+
+            var visitors = new List<VisitorDTO>();
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+            using (var stream = new MemoryStream())
+            {
+                await formFile.CopyToAsync(stream);
+                using(var package = new  ExcelPackage(stream))
+                {
+                    var worksheet = package.Workbook.Worksheets[0];
+                    var rowCount = worksheet.Dimension.Rows;
+                    
+                    for(int i = 2; i < rowCount; i++)
+                    {
+                        var visitor = new VisitorDTO
+                        {
+                            Id = GetStringFromCell(worksheet, i, 2),
+                            Name = GetStringFromCell(worksheet, i, 3),
+                            Email = GetStringFromCell(worksheet, i, 4),
+                            Address = GetStringFromCell(worksheet, i, 5),
+                            Role = GetStringFromCell(worksheet, i, 6),
+                        };
+                        await AddVisitor(visitor);
+                        visitors.Add(visitor);
+                    }
+                }
+
+                
+            }
+            return Ok(visitors);
+        }
+
+
+    [HttpGet("ExportInExcel")]
         public async Task<IActionResult> Export()
         {
             var visitors = await _visitorService.GetAllVisitors();
@@ -179,6 +219,21 @@ namespace VisitorSecurityClearanceSystem.Controllers
                 return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
             }
         }
+        [HttpPost]
+        public async Task<IActionResult> AddVisitorByMakePostRequest(VisitorDTO visitor)
+        {
+            var response = await _visitorService.AddVisitorByMakePostRequest(visitor);
+            return Ok(response);
+        }
 
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var response = await _visitorService.GetAllEmployees();
+            return Ok(response);
+        }
     }
+
 }
+
+    

@@ -7,6 +7,8 @@ using VisitorSecurityClearanceSystem.Interface;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
 using AutoMapper;
+using Newtonsoft.Json;
+using VisitorSecurityClearanceSystem.Common;
 
 namespace VisitorSecurityClearanceSystem.Services
 {
@@ -211,6 +213,22 @@ namespace VisitorSecurityClearanceSystem.Services
                 Role = "visitor",
                 PassStatus = false
             };
+        }
+
+        public async Task<VisitorDTO> AddVisitorByMakePostRequest(VisitorDTO visitor)
+        {
+            var serialObj = JsonConvert.SerializeObject(visitor);
+            var requestObj = await HttpClientHelper.MakePostRequest(Credentials.EmployeeUrl,Credentials.AddEmployeeEndPoint,serialObj);
+            var responseObj = JsonConvert.DeserializeObject<VisitorDTO>(requestObj);
+            return responseObj;
+
+        }
+
+        public async Task<IEnumerable<VisitorDTO>> GetAllEmployees()
+        {
+            var responseString = await HttpClientHelper.MakeGetRequest(Credentials.EmployeeUrl, Credentials.GetAllEmployeesEndPoint);
+            var employees = JsonConvert.DeserializeObject<IEnumerable<VisitorDTO>>(responseString);
+            return employees;
         }
     }
 }
