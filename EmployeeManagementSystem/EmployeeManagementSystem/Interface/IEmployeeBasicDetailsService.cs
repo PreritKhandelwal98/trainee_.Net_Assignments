@@ -12,7 +12,7 @@ namespace EmployeeManagementSystem.Interface
         Task DeleteEmployeeBasicDetails(string id);
         Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria);
 
-        Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(EmployeeBasicDetailsDTO visitor);
+        Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(VisitorDTO visitor);
         Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployees();
 
     }

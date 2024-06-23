@@ -69,16 +69,16 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddVisitorByMakePostRequest(EmployeeBasicDetailsDTO employeee)
+        public async Task<IActionResult> AddVisitorByMakePostRequest(VisitorDTO visitor)
         {
-            var response = await _basicDetailService.AddVisitorByMakePostRequest(employeee);
+            var response = await _basicDetailService.AddVisitorByMakePostRequest(visitor);
             return Ok(response);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetVisitorByMakePostRequest()
         {
-            var response = await _basicDetailService.GetAllEmployees();
+            var response = await _basicDetailService.GetVisitorByMakePostRequest();
             return Ok(response);
         }
 

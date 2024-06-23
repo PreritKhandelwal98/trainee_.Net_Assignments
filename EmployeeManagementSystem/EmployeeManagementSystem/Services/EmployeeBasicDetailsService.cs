@@ -106,7 +106,7 @@ namespace EmployeeManagementSystem.Services
             return response;
         }
 
-        public async Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(EmployeeBasicDetailsDTO visitor)
+        public async Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(VisitorDTO visitor)
         {
             var serialObj = JsonConvert.SerializeObject(visitor);
             var requestObj = await HttpClientHelper.MakePostRequest(Credentials.EmployeeUrl, Credentials.AddEmployeeEndPoint, serialObj);
