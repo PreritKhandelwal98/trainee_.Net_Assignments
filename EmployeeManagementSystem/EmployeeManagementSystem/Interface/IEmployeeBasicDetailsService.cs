@@ -12,8 +12,8 @@ namespace EmployeeManagementSystem.Interface
         Task DeleteEmployeeBasicDetails(string id);
         Task<EmployeeFilterCriteria> GetAllEmployeesByPagination(EmployeeFilterCriteria employeeFilterCriteria);
 
-        Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(VisitorDTO visitor);
-        Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployees();
+        Task<VisitorDTO> AddVisitorByMakePostRequest(VisitorDTO visitor);
+        Task<IEnumerable<VisitorDTO>> GetVisitorByMakePostRequest();
 
     }
 }

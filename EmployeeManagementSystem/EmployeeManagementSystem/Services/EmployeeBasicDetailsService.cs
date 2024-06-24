@@ -106,20 +106,20 @@ namespace EmployeeManagementSystem.Services
             return response;
         }
 
-        public async Task<EmployeeBasicDetailsDTO> AddVisitorByMakePostRequest(VisitorDTO visitor)
+        public async Task<VisitorDTO> AddVisitorByMakePostRequest(VisitorDTO visitor)
         {
             var serialObj = JsonConvert.SerializeObject(visitor);
-            var requestObj = await HttpClientHelper.MakePostRequest(Credentials.EmployeeUrl, Credentials.AddEmployeeEndPoint, serialObj);
-            var responseObj = JsonConvert.DeserializeObject<EmployeeBasicDetailsDTO>(requestObj);
+            var requestObj = await HttpClientHelper.MakePostRequest(Credentials.VisitorUrl, Credentials.AddVisitorEndPoint, serialObj);
+            var responseObj = JsonConvert.DeserializeObject<VisitorDTO>(requestObj);
             return responseObj;
 
         }
 
      
-        public async Task<IEnumerable<EmployeeBasicDetailsDTO>> GetAllEmployees()
+        public async Task<IEnumerable<VisitorDTO>> GetVisitorByMakePostRequest()
         {
-            var responseString = await HttpClientHelper.MakeGetRequest(Credentials.EmployeeUrl, Credentials.GetAllEmployeesEndPoint);
-            var employees = JsonConvert.DeserializeObject<IEnumerable<EmployeeBasicDetailsDTO>>(responseString);
+            var responseString = await HttpClientHelper.MakeGetRequest(Credentials.VisitorUrl, Credentials.GetAllVisitorEndPoint);
+            var employees = JsonConvert.DeserializeObject<IEnumerable<VisitorDTO>>(responseString);
             return employees;
         }
 
